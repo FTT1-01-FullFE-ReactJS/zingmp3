@@ -54,7 +54,7 @@
     flex-basis: auto;
     flex-grow: 0;
     flex-shrink: 0;
-    height: 45px;   
+    height: 45px;
 }
 .list .chart-song-item .list-item .media .media-left .song-prefix {
     display: flex;
@@ -131,7 +131,7 @@
     display: flex;
     display: flex;
     justify-content: space-around;
-    align-items: center; 
+    align-items: center;
     visibility: hidden;
     width: 80%;
 }
@@ -190,9 +190,9 @@
 }
 .album-info {
     cursor: pointer;
-    
+
 }
-.album-info a { 
+.album-info a {
     font-size: 13px;
     white-space: nowrap;
     color: hsla(0,0%,100%,0.5);
@@ -341,8 +341,8 @@
     padding: 0 0 10px 40px;
     font-size: 24px;
     font-weight: 700;
-   
-    line-height: normal;   
+
+    line-height: normal;
 }
 .week-chart-section .week-chart-box .box-header a {
     color: #fff;
