@@ -18,6 +18,9 @@ button {
   outline: none;
   border:  none;
 }
+.page-redirect-btn.active .icon {
+  color: #fff;
+}
 .fs17 {
   font-size: 17px !important;
 }
@@ -131,6 +134,11 @@ button {
   align-items: center;
   justify-content: center;
   opacity: 0;
+  border: 1px solid #fff;
+}
+.button .icon-white {
+  font-size: 9px;
+  margin-left: 1px;
 }
 .content-left-sidebar .nav-main li:hover .button {
   opacity: 1;
