@@ -167,32 +167,6 @@
 .add-playlist-sidebar i {
   font-size: 16px;
 }
-.zm-header {
-  display: flex;
-  align-items: center;
-  position: fixed;
-  left: 235px;
-  top: 0;
-  right: 0;
-  height: 70px;
-  padding: 0 59px;
-  z-index: 99;
-  min-width: 660px;
-}
-.zm-header .level-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-.zm-header .level-left {
-  flex-grow: 1;
-  margin-right: 10px;
-}
-.level-wrapper .level-left,
-.level-wrapper .level-right {
-  display: flex;
-}
 .page-redirect-btn {
   background: none;
   padding: 0 10px;
@@ -205,27 +179,8 @@
 .page-prev-btn {
   background: none;
 }
-
 .page-next-btn {
   background: none;
-}
-
-.zm-header .level-left .search {
-  position: relative;
-  width: 400px;
-}
-.search__container {
-  position: relative;
-  border-radius: 20px;
-  height: 40px;
-  background-color: hsla(0,0%,100%,0.1);
-}
-.search__container .input-wrapper {
-  position: absolute;
-  top: 0;
-  left: 38px;
-  right: 10px;
-  bottom: 0;
 }
 .search__container .search__container-submit {
   height: 100%;
@@ -235,61 +190,6 @@
 .search__container .search__container-submit .icon {
   color: #fff;
 }
-.search__container .input-wrapper .form-control {
-  background: transparent;
-  border: none;
-  outline: none;
-  width: 100%;
-  height: 100%;
-}
-.zm-header .level-right .download-desktop-app {
-  margin-right: 12px;
-  background-color: hsla(0,0%,100%,0.1);
-  border-radius: 999px;
-  position: relative;
-}
-.download-desktop-app .btn {
-  display: flex;
-  padding: 10px 24px;
-  align-items: center;
-  font-weight: 600;
-  color: #c273ed;
-}
-.download-desktop-app .btn .icon1 {
-  margin-right: 4px;
-  color: #c273ed !important;
-}
-a.btn:hover {
-  opacity: 0.9;
-}
-.zm-header .level-right .setting-item {
-  margin-left: 10px;
-}
-.zm-header .level-right .setting-item i {
-  color: #d8d8d8;
-}
-.zm-header .level-right .setting-item>.btn {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: hsla(0,0%,100%,0.1);
-  border-radius: 999px;
-  border:none;
-  overflow: hidden;
-}
-::placeholder {
-  color: #dadada;
-  font-size: 13px;
-}
-input {
-  color: #fff;
-}
-input:focus {
-  color: #fff;
-}
-
 .content-main .my-music {
   margin-top: 140px;
 }
@@ -1088,39 +988,70 @@ button:focus {
 }
 
 /* Custom checkbox */
-.checkbox-hidden {
+.container-checkbox-wrapper {
+  cursor: pointer;
+  position: absolute;
+  width: 15px;
+  height: 15px;
   display: none;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  top: 58%;
+  left: 1%;
 }
-
-.custom-checkbox {
-  width: 16px;
-  height: 16px;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  position: relative;
+.select-item:hover .container-checkbox-wrapper {
+  display: flex;
 }
-
-.checkbox-hidden:checked ~ .custom-checkbox::after {
+.select-item:hover .song-prefix {
+  opacity: 0;
+}
+.select-item:hover .none {
+  opacity: 1 !important;
+}
+.container-checkbox {
   display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  width: 15px;
+  height: 15px;
+  margin: 0px;
 }
-
-.custom-checkbox::after {
-  display: none;
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: -7px;
+  left: -1px;
+  height: 15px;
+  width: 15px;
+  z-index: 999;
+  border: 1px solid #fff;
+  border-radius: 2px;
+}
+.container input:checked ~ .checkmark {
+  background-color: hsla(0,0%,100%,0.15);
+}
+.checkmark:after {
   content: "";
   position: absolute;
-  left: 50%;
-  top: -30%;
-  width: 5px;
-  height: 10px;
-  border: solid #fff;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg) translate(50%, 50%);
-  -webkit-transform: rotate(45deg) translate(50%, 50%);
-  -moz-transform: rotate(45deg) translate(50%, 50%);
-  -ms-transform: rotate(45deg) translate(50%, 50%);
-  -o-transform: rotate(45deg) translate(50%, 50%);
+  display: none;
+}
+.container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.container-checkbox .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
