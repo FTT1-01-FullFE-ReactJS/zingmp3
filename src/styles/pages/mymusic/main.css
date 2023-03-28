@@ -186,6 +186,7 @@
   height: 100%;
   width: 40px;
   background: none;
+  padding-left: 27px;
 }
 .search__container .search__container-submit .icon {
   color: #fff;
@@ -456,7 +457,6 @@
   align-items: center;
   display: flex;
   padding: 10px;
-  border-radius: 5px;
 }
 .content-main .bottom-section .library-song .media .media-left {
   flex: 0 0 50%;
@@ -480,6 +480,9 @@
 .content-main .bottom-section .select-item {
   display: flex;
   position: relative;
+}
+.content-main .bottom-section .select-item:hover {
+  background-color: hsla(0,0%,100%,0.15);
 }
 .content-main .bottom-section .select-item .check-box-wrapper {
   cursor: pointer;
@@ -510,7 +513,7 @@
   height: 13px;
 }
 .library-song .container input {
-  
+
   position: absolute;
     visibility: inherit;
     cursor: pointer;
@@ -638,10 +641,10 @@
   visibility: hidden;
 }
 .content-main .bottom-section .select-item:hover .song-icon {
- visibility: hidden;
+  visibility: hidden;
 }
 .content-main .bottom-section .select-item .list-item:hover {
-  background-color: hsla(0,0%,100%,0.15);
+  /* background-color: hsla(0,0%,100%,0.15); */
   border-radius: 4px;
 }
 .content-main .bottom-section .select-item .list-item:hover img {
@@ -1028,7 +1031,7 @@ button:focus {
 .checkmark {
   position: absolute;
   top: -7px;
-  left: -1px;
+  left: -6px;
   height: 15px;
   width: 15px;
   z-index: 999;

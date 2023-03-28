@@ -230,7 +230,7 @@ button {
   align-items: center;
 }
 .add-playlist-sidebar button {
-  background-color: transparent; 
+  background-color: transparent;
   color: #fff;
 }
 .add-playlist-sidebar i {
@@ -270,7 +270,7 @@ button:focus {
   flex-grow: 1;
   margin-right: 10px;
 }
-.level-wrapper .level-left, 
+.level-wrapper .level-left,
 .level-wrapper .level-right {
   display: flex;
 }
@@ -296,6 +296,10 @@ button:focus {
   border-radius: 20px;
   height: 40px;
   background-color: hsla(0,0%,100%,0.1);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 .search__container .input-wrapper {
   position: absolute;
@@ -303,17 +307,15 @@ button:focus {
   left: 38px;
   right: 10px;
   bottom: 0;
+  padding-bottom: 3px;
 }
 .btn {
   background-color: transparent;
   outline: none;
 }
 .icon {
-  font-size: 24px;
+  font-size: 20px;
   margin-right: 15px;
-  line-height: 66%;
-  display: inline-block;
-  color: #7d7272;
 }
 .search__container .input-wrapper .form-control {
   background: transparent;

@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     mymusic: './src/scripts/pages/mymusic/main.js',
+    // discover: './src/scripts/pages/discover/main.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -10,6 +11,12 @@ module.exports = {
       filename: 'mymusic.html',
       template: './src/pages/mymusic/index.html',
       chunks: ['mymusic']
+    }),
+    new HtmlWebpackPlugin({
+      title: 'discover',
+      filename: 'discover.html',
+      template: './src/pages/discover/index.html',
+      chunks: ['discover']
     }),
   ],
   module: {

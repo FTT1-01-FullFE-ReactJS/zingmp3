@@ -26,7 +26,7 @@
 .content-left-sidebar .nav-main .none {
     background-color: transparent;
 }
-.content-left-sidebar .nav-main .discorver {
+.content-left-sidebar .nav-main .discover {
     background-color: hsla(0,0%,100%,0.1);
 }
 /* end css sidebar */
@@ -99,8 +99,8 @@ button:focus {
     z-index: 999;
     cursor: pointer;
 }
-.slick-prev {  
-    left: 25px; 
+.slick-prev {
+    left: 25px;
 }
 .slick-prev:hover {
     filter: brightness(.9);
@@ -476,7 +476,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-}      
+}
 .media-right .level .level-item {
     display: none;
     justify-content: center;
@@ -547,14 +547,14 @@ h3 {
     font-weight: 300;
 }
 .playlist-section .media-header .meida-content .title {
-    font-size: 18px;   
+    font-size: 18px;
 }
 .playlist-section .media-header .meida-content .title a {
     color: #fff;
 }
 .playlist-section .media-header .meida-content .title a:hover {
     color: #c273ed;
-}    
+}
 /* end css playlist-section*/
 
 /* css livestream-section */
@@ -955,7 +955,7 @@ figure {
     display: flex;
     display: flex;
     justify-content: space-around;
-    align-items: center; 
+    align-items: center;
     visibility: hidden;
     width: 80%;
 }
