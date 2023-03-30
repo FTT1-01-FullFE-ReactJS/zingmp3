@@ -173,23 +173,11 @@
   margin: 0 10px;
   display: block;
 }
-.page-redirect-btn .icon {
-  color: #afafaf;
-}
 .page-prev-btn {
   background: none;
 }
 .page-next-btn {
   background: none;
-}
-.search__container .search__container-submit {
-  height: 100%;
-  width: 40px;
-  background: none;
-  padding-left: 27px;
-}
-.search__container .search__container-submit .icon {
-  color: #fff;
 }
 .content-main .my-music {
   margin-top: 140px;
@@ -620,12 +608,14 @@
   color: #9b4de0;
 }
 .content-main .bottom-section .select-item .list-item .media-center .album-info {
-  color:  hsla(0,0%,100%,0.5);
   font-size: 12px;
+}
+.content-main .bottom-section .select-item .list-item .media-center .album-info a {
+  color:  hsla(0,0%,100%,0.5);
 }
 .content-main .bottom-section .select-item .list-item .media-center .album-info a:hover {
   text-decoration: underline;
-  color: #9b4de0;
+  color: #c273ed;
   cursor: pointer;
 }
 .content-main .bottom-section .select-item .list-item .media-right .hover-items {
@@ -1002,6 +992,7 @@ button:focus {
   transform: translateY(-50%);
   top: 58%;
   left: 1%;
+  margin-left: 3px;
 }
 .select-item:hover .container-checkbox-wrapper {
   display: flex;

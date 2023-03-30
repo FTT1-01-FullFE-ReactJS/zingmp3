@@ -18,6 +18,24 @@ module.exports = {
       template: './src/pages/discover/index.html',
       chunks: ['discover']
     }),
+    new HtmlWebpackPlugin({
+      title: 'zingchat',
+      filename: 'zingchat.html',
+      template: './src/pages/zingchat/index.html',
+      chunks: ['zinghchat']
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Singer',
+      filename: 'singer.html',
+      template: './src/pages/singer/index.html',
+      chunks: ['singer']
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Album',
+      filename: 'album.html',
+      template: './src/pages/album/index.html',
+      chunks: ['album']
+    }),
   ],
   module: {
     rules: [

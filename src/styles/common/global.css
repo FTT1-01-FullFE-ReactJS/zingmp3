@@ -270,6 +270,21 @@ button:focus {
   flex-grow: 1;
   margin-right: 10px;
 }
+.search__container .search__container-submit {
+  height: 100%;
+  width: 40px;
+  background: none;
+  padding-left: 27px;
+}
+.search__container .search__container-submit .icon {
+  color: #fff;
+}
+.pdl {
+  padding-left: 11px !important;
+}
+.page-redirect-btn .icon {
+  color: #afafaf;
+}
 .level-wrapper .level-left,
 .level-wrapper .level-right {
   display: flex;
