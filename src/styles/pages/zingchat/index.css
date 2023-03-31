@@ -366,10 +366,10 @@
 }
 .columns {
     display: flex;
-    box-lines: multiple;
     flex-wrap: wrap;
     position: relative;
     margin: 0 -15px;
+    padding-bottom: 20px;
 }
 .column {
     flex: 0 0 33.33333%;

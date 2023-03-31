@@ -221,7 +221,6 @@ figure {
     align-self: center;
     width: 0;
     margin-left: -10px;
-    visibility: hidden;
 }
 .media-left {
     margin-right: 10px;
