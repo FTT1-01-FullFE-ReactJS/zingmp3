@@ -176,7 +176,7 @@ figure {
     flex-shrink: 0;
     justify-content: center;
 }
-.content-main .container .playlist-wrapper .playlist-top .media .media-content .level button {
+.content-main .container .playlist-wrapper .playlist-top .media .media-content .level .button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -237,7 +237,7 @@ figure {
     display: flex;
     align-items: center;
 }
-.media-left .sort-wrapper .icon-updown button {
+.media-left .sort-wrapper .icon-updown .button {
     font-size: 13px;
     color: hsla(0,0%,100%,0.5);
 }

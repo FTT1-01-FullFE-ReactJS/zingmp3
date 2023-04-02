@@ -220,7 +220,7 @@
   display: flex;
   justify-content: center;
 }
-.media-right .level-item button {
+.media-right .level-item .button {
   font-size: 14px;
   border-radius: 999px;
   line-height: normal;
@@ -238,14 +238,14 @@
 .list-item .media-right .hover-items {
   display: none;
 }
-.media-right .level-item button  i {
+.media-right .level-item .button  i {
   color: #fff;
   font-size: 16px;
   padding: 5px;
   border-radius: 50%;
   margin: 0px;
 }
-.list-item .media-right .hover-items button:hover {
+.list-item .media-right .hover-items .button:hover {
   background-color: hsla(0,0%,100%,0.1);
 }
 .list-item:hover .hover-items {
@@ -350,7 +350,7 @@
 .week-chart-section .week-chart-box .box-header a:hover {
   color: #9b4de0;
 }
-.week-chart-section .week-chart-box .box-header button {
+.week-chart-section .week-chart-box .box-header .button-week-chart {
   margin-left: 5px;
   width: 29px;
   height: 29px;
@@ -360,7 +360,7 @@
   border-radius: 999px;
   background-color: #9b4de0;
 }
-.week-chart-section .week-chart-box .box-header button i {
+.week-chart-section .week-chart-box .box-header .button-week-chart i {
   font-size: 14px;
   color: #fff;
 }
@@ -431,12 +431,12 @@
 }
 figure {
   margin: 0px;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 .media .media-left .song-thumb {
   position: relative;
-  height: 50px;
+  height: 40px;
   margin-right: 10px;
 }
 .media .media-left .song-thumb img {

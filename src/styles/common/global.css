@@ -229,7 +229,7 @@ button {
   justify-content: center;
   align-items: center;
 }
-.add-playlist-sidebar button {
+.add-playlist-sidebar .button {
   background-color: transparent;
   color: #fff;
 }
@@ -239,6 +239,14 @@ button {
 /* END CSS LEFT SIDEBAR */
 
 /* CSS HEADER */
+.page-redirect-btn {
+  background: none;
+  padding: 0 10px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 button {
   background-color: transparent;
 }

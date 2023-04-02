@@ -171,7 +171,9 @@
   background: none;
   padding: 0 10px;
   margin: 0 10px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .page-prev-btn {
   background: none;
@@ -223,7 +225,7 @@
   align-items: center;
   margin-bottom: 20px;
 }
-.content-main .channel-section .child-title button {
+.content-main .channel-section .child-title .button {
   background-color: hsla(0,0%,100%,0.1);
   border-radius: 999px;
 }
@@ -285,9 +287,6 @@
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
-/* .content-main .channel-section .library-wrapper .library .card .box .relative {
-  position: relative;
-} */
 .content-main .channel-section .library-wrapper .child-menu {
   position: absolute;
   right: -99%;
@@ -340,7 +339,7 @@
 .content-main .channel-section .library-wrapper .library .card .box i {
   margin: 0px;
 }
-.content-main .channel-section .library-wrapper .library .card .box button {
+.content-main .channel-section .library-wrapper .library .card .box .button {
   background-color: transparent;
 }
 .content-main .channel-section .library-wrapper .library .card .box .icon20px {
@@ -653,7 +652,7 @@
   justify-content: center;
   align-items: center;
 }
-.content-main .bottom-section .select-item .list-item .media-right button {
+.content-main .bottom-section .select-item .list-item .media-right .button {
   background-color: transparent;
   line-height: 0;
   height: 40px;
