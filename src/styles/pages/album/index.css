@@ -1,34 +1,43 @@
 .content-left-sidebar {
     height: 100%;
 }
+
 .content-main {
     margin: 0px;
 }
+
 .content-main .scrollbar-content {
     position: absolute;
     overflow: hidden scroll;
     width: 100%;
     height: 100%;
-    padding:0 59px;
+    padding: 0 59px;
 }
+
 .pdt-20px {
     padding-top: 20px;
 }
+
 .mgb-30px {
     margin-bottom: 30px;
 }
+
 .mgr-10px {
     margin-right: 10px;
 }
+
 .content-main .container {
     margin-top: 70px;
 }
+
 .content-main .container .playlist-wrapper {
     padding-top: 20px;
 }
+
 .content-main .container .playlist-wrapper .playlist-top {
     display: flex;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media {
     position: sticky;
     width: 300px;
@@ -37,23 +46,29 @@
     border-radius: 5px;
     float: left;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .thumbnail {
     position: relative;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .thumbnail .card {
     display: block;
     position: relative;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .thumbnail .card:hover img {
     transform: scale(1.099);
     opacity: 0.8;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .thumbnail .card:hover .opacity {
     visibility: inherit;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .thumbnail .card:hover .box {
     opacity: 1;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .thumbnail .box {
     display: flex;
     justify-content: space-evenly;
@@ -64,22 +79,27 @@
     width: 100%;
     opacity: 0;
 }
+
 figure {
     padding: 0px;
     margin: 0px;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .thumbnail .thumb-img {
     overflow: hidden;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .thumbnail figure {
     width: 300px;
     height: 300px;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .thumbnail img {
     width: 100%;
     transition: all 0.5s ease-in-out;
     display: block;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .btn-play {
     display: flex;
     border-radius: 999px;
@@ -90,6 +110,7 @@ figure {
     cursor: pointer;
     position: relative;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .icon-play {
     width: 45px;
     height: 45px;
@@ -100,6 +121,7 @@ figure {
     border-radius: 50%;
     color: #fff;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content {
     display: flex;
     align-items: center;
@@ -107,9 +129,11 @@ figure {
     width: 100%;
     flex-direction: column;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .content-top {
     text-align: center;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .title {
     font-size: 20px;
     font-weight: 700;
@@ -117,29 +141,35 @@ figure {
     margin: 0px;
     color: #fff;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .artists,
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .like {
-    color: hsla(0,0%,100%,0.5);
+    color: hsla(0, 0%, 100%, 0.5);
     font-size: 12px;
     line-height: 1.75;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .artists a {
-    color: hsla(0,0%,100%,0.5);
+    color: hsla(0, 0%, 100%, 0.5);
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .artists a:hover {
     text-decoration: underline;
     color: #c273ed;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .artists i {
     margin-left: 2px;
     margin-right: 2px;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .actions {
     flex-direction: column;
     margin-top: 16px;
     display: flex;
     justify-content: center;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .actions .btn-actions {
     display: flex;
     align-items: center;
@@ -152,22 +182,27 @@ figure {
     border-radius: 999px;
     margin-bottom: 16px;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .actions .btn-actions .icon {
     font-size: 15px;
     margin-right: 10px;
     color: #fff;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .actions .btn-actions span {
     text-transform: uppercase;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .actions .btn-actions:hover {
     filter: brightness(.9);
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .level {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .level-item {
     align-items: center;
     display: flex;
@@ -176,31 +211,36 @@ figure {
     flex-shrink: 0;
     justify-content: center;
 }
-.content-main .container .playlist-wrapper .playlist-top .media .media-content .level button {
+
+.content-main .container .playlist-wrapper .playlist-top .media .media-content .level .button {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 35px;
     height: 35px;
-    background-color: hsla(0,0%,100%,0.1);
+    background-color: hsla(0, 0%, 100%, 0.1);
     border-radius: 999px;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .level .mg {
     margin-right: 10px;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .media .media-content .level .icon-level {
     font-size: 16px;
     padding: 5px;
     border-radius: 50%;
     color: #fff;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .playlist-content {
     margin-left: 50px;
     width: 100%;
     height: 100%;
 }
+
 .content-main .container .playlist-wrapper .playlist-top .playlist-content .media-item {
-    border-bottom: 1px solid hsla(0,0%,100%,0.05);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.05);
     height: 46px;
     align-items: center;
     display: flex;
@@ -208,11 +248,14 @@ figure {
     padding: 10px;
     border-radius: 5px;
 }
-.media-left, .media-right {
+
+.media-left,
+.media-right {
     flex-basis: auto;
     flex-grow: 0;
     flex-shrink: 0;
 }
+
 .media-content {
     flex-basis: auto;
     flex-grow: 1;
@@ -222,40 +265,49 @@ figure {
     width: 0;
     margin-left: -10px;
 }
+
 .media-left {
     margin-right: 10px;
     display: flex;
     width: 50%;
 }
+
 .media-right {
     margin-left: 10px;
 }
+
 .media-item {
     display: flex;
 }
+
 .media-left .sort-wrapper {
     display: flex;
     align-items: center;
 }
-.media-left .sort-wrapper .icon-updown button {
+
+.media-left .sort-wrapper .icon-updown .button {
     font-size: 13px;
-    color: hsla(0,0%,100%,0.5);
+    color: hsla(0, 0%, 100%, 0.5);
 }
+
 .column-text {
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
-    color: hsla(0,0%,100%,0.5);
+    color: hsla(0, 0%, 100%, 0.5);
 }
+
 .select-item {
     display: flex;
     position: relative;
 }
+
 .select-item .list-item {
-    border-bottom: 1px solid hsla(0,0%,100%,0.05);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.05);
     flex-grow: 1;
     max-width: 100%;
 }
+
 .select-item .list-item .media-song {
     align-items: center;
     display: flex;
@@ -263,6 +315,7 @@ figure {
     padding: 10px;
     border-radius: 5px;
 }
+
 .select-item .list-item .media-song .media-left-item {
     display: flex;
     width: 50%;
@@ -270,17 +323,20 @@ figure {
     flex-shrink: 1;
     margin-right: 10px;
 }
+
 .song-prefix {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 12px;
     margin-right: 10px;
-    color: hsla(0,0%,100%,0.5);
+    color: hsla(0, 0%, 100%, 0.5);
 }
+
 .song-prefix .number {
-    color: hsla(0,0%,100%,0.5);
+    color: hsla(0, 0%, 100%, 0.5);
 }
+
 .song-thumb {
     display: block;
     position: relative;
@@ -291,13 +347,16 @@ figure {
     flex-shrink: 0;
     height: 40px;
 }
+
 .song-thumb figure {
     width: 40px;
     height: 40px;
 }
+
 .song-thumb img {
     width: 100%;
 }
+
 .song-thumb .box {
     position: absolute;
     top: 0;
@@ -306,6 +365,7 @@ figure {
     right: 0;
     opacity: 0;
 }
+
 .song-thumb .box .box-actions {
     position: absolute;
     left: 50%;
@@ -317,109 +377,137 @@ figure {
     display: flex;
     justify-content: space-around;
 }
+
 .song-thumb .box .box-actions i {
     color: #fff;
 }
+
 .card-info {
     overflow: hidden;
     display: flex;
     flex-direction: column;
     width: 100%;
 }
+
 .title-wrapper {
     display: flex;
     align-items: center;
 }
+
 .card-info span {
     font-size: 14px;
     color: #fff;
 }
+
 .media-song .subtitle {
     display: block;
     font-size: 12px;
     margin-top: 3px;
     margin-bottom: 0px;
 }
+
 .media-song .subtitle a {
-    color: hsla(0,0%,100%,0.5);
+    color: hsla(0, 0%, 100%, 0.5);
 }
+
 .media-song .subtitle a:hover {
     color: #c273ed;
     text-decoration: underline;
 }
+
 .level {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .level .icon-hover {
     padding: 5px 7px;
     margin: 0px 4px;
     border-radius: 999px;
-    
+
 }
+
 .level .icon-hover:hover {
-    background-color: hsla(0,0%,100%,0.1);
+    background-color: hsla(0, 0%, 100%, 0.1);
 }
+
 .level .icon-hover .violet {
     color: #9b4de0;
 }
+
 .mgr {
     margin-right: 2px;
 }
+
 .level .icon-hover .icon {
     font-size: 16px;
     padding: 5px;
     border-radius: 50%;
     margin: 0px;
 }
+
 .media-right-item .hover-items {
     display: none;
 }
+
 .select-item:hover .hover-items {
     display: flex;
 }
+
 .select-item:hover .action-items {
     display: none;
 }
+
 .select-item:hover {
-    background-color: hsla(0,0%,100%,0.15);
+    background-color: hsla(0, 0%, 100%, 0.15);
     border-radius: 4px;
 }
+
 .select-item:hover .opacity {
     visibility: inherit;
 }
+
 .select-item:hover .box {
     opacity: 1;
 }
+
 .select-item .hover-items .white {
     color: #fff;
 }
+
 .select-item .hover-items .fs13 {
     font-size: 13px;
 }
+
 .select-item .action-items .time {
     font-size: 12px;
     width: 46px;
-    color: hsla(0,0%,100%,0.5);
+    color: hsla(0, 0%, 100%, 0.5);
 }
+
 .bottom-info {
     font-size: 12px;
-    color: hsla(0,0%,100%,0.5);
+    color: hsla(0, 0%, 100%, 0.5);
     margin-top: 10px;
 }
+
 .bottom-info span:first-child {
     margin-left: 0;
 }
+
 .bottom-info span {
     margin: 0 8px;
 }
+
 .bottom-info span:last-child {
     margin-right: 0;
 }
+
 .channel-section {
     margin-top: 48px;
 }
+
 .container-checkbox-wrapper {
     cursor: pointer;
     position: absolute;
@@ -432,15 +520,19 @@ figure {
     top: 58%;
     left: 1%;
 }
+
 .select-item:hover .container-checkbox-wrapper {
     display: flex;
 }
+
 .select-item:hover .song-prefix {
     opacity: 0;
 }
+
 .select-item:hover .none {
     opacity: 1 !important;
 }
+
 .container-checkbox {
     display: block;
     position: relative;
@@ -450,6 +542,7 @@ figure {
     height: 15px;
     margin: 0px;
 }
+
 .container-checkbox input {
     position: absolute;
     opacity: 0;
@@ -457,6 +550,7 @@ figure {
     height: 0;
     width: 0;
 }
+
 .checkmark {
     position: absolute;
     top: -7px;
@@ -467,17 +561,21 @@ figure {
     border: 1px solid #fff;
     border-radius: 2px;
 }
-.container input:checked ~ .checkmark {
-    background-color: hsla(0,0%,100%,0.15);
+
+.container input:checked~.checkmark {
+    background-color: hsla(0, 0%, 100%, 0.15);
 }
+
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
-.container-checkbox input:checked ~ .checkmark:after {
+
+.container-checkbox input:checked~.checkmark:after {
     display: block;
 }
+
 .container-checkbox .checkmark:after {
     left: 5px;
     top: 2px;
@@ -487,6 +585,7 @@ figure {
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
 }
+
 .playlist-content .channel-section .title {
     margin-bottom: 20px;
     display: flex;
@@ -495,6 +594,7 @@ figure {
     font-size: 20px;
     color: #fff;
 }
+
 .media-content {
     flex-basis: auto;
     flex-grow: 1;
@@ -503,13 +603,15 @@ figure {
     align-self: center;
     width: 0;
 }
+
 .media-content .album-info {
     font-size: 12px;
     white-space: nowrap;
     overflow: hidden;
     max-width: 100%;
-    color: hsla(0,0%,100%,0.5);
+    color: hsla(0, 0%, 100%, 0.5);
 }
+
 .select-item .list-item .media-song .media-left-item-2 {
     display: flex;
     width: 50%;
@@ -517,6 +619,7 @@ figure {
     flex-shrink: 0;
     margin-right: 10px;
 }
+
 .playlist-section .container-playlist-section .title-playlist {
     display: flex;
     justify-content: space-between;
@@ -524,38 +627,46 @@ figure {
     width: 100%;
     margin-bottom: 20px;
 }
+
 .playlist-section .container-playlist-section .title-playlist .text {
     color: #fff;
     font-size: 22px;
 }
+
 .playlist-section .container-playlist-section .title-playlist .btn-playlist {
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    color: hsla(0,0%,100%,0.5);
+    color: hsla(0, 0%, 100%, 0.5);
     line-height: 1.1;
 }
+
 .playlist-section .container-playlist-section .title-playlist .btn-playlist i {
     margin-bottom: 4px;
     margin-left: 7px;
 }
+
 .playlist-section .container-playlist-section .title-playlist .btn-playlist:hover {
     color: #c273ed;
 }
+
 .carousel-wrapper {
     position: relative;
     width: 100%;
 }
+
 .carousel-wrapper .carousel {
     display: flex;
     margin: 0 -15px;
 }
+
 .carousel-container {
     display: flex;
     width: 100%;
 }
+
 .carousel-item {
     padding: 0 10px;
     position: relative;
@@ -564,34 +675,42 @@ figure {
     width: 16.66667%;
     overflow: hidden;
 }
+
 .carousel-item a img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
 }
+
 .carousel-item .card {
     position: relative;
     overflow: hidden;
     border-radius: 5px;
 }
+
 .carousel-item .card-border999 {
     border-radius: 999px;
 }
+
 .carousel-item .card img {
     width: 100%;
     transition: all 0.5s ease-in-out;
     display: block;
 }
+
 .carousel-item .card:hover img {
     transform: scale(1.099);
     opacity: 0.8;
 }
+
 .carousel-item .card:hover .opacity {
     visibility: visible;
 }
+
 .carousel-item .card:hover .box {
     opacity: 1;
 }
+
 .carousel-item .box {
     display: flex;
     justify-content: space-evenly;
@@ -602,12 +721,15 @@ figure {
     width: 100%;
     opacity: 0;
 }
-.carousel-item  button {
+
+.carousel-item button {
     background-color: transparent;
 }
+
 .carousel-item .violet {
     color: #9b4de0;
 }
+
 .carousel-item .icon-play {
     width: 45px;
     height: 45px;
@@ -615,40 +737,49 @@ figure {
     border: 1px solid #dadada;
     color: #fff;
 }
+
 .carousel-item .icon-play i {
     font-size: 20px;
     margin-left: 2px;
     margin-top: 3px;
 }
+
 .carousel-item .fff {
     color: #fff;
 }
+
 .opacity {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     visibility: hidden;
 }
-.carousel-item  .content {
+
+.carousel-item .content {
     margin-top: 12px;
 }
-.carousel-item  .content .title a {
+
+.carousel-item .content .title a {
     color: #fff;
     font-size: 15px;
 }
-.carousel-item  .content .title a:hover {
+
+.carousel-item .content .title a:hover {
     color: #c273ed;
 }
+
 .playlist-section .title-2 {
     font-size: 20px;
     color: #fff;
 }
+
 .playlist-section .desktop-25 {
     width: 20%;
 }
+
 .playlist-section .desktop-25 .icon-play-2 {
     display: flex;
     justify-content: center;
@@ -656,41 +787,52 @@ figure {
     width: 50px;
     height: 50px;
 }
+
 .playlist-section .desktop-25 .icon-play-2 i {
     font-size: 25px;
     margin: 0px;
 }
+
 .playlist-section .desktop-25 .fs {
     font-size: 20px;
 }
+
 .playlist-section .desktop-25 .mgr {
     margin-right: 2px;
 }
+
 .playlist-section .desktop-25 .btn-hover {
     border-radius: 50%;
     width: 40px;
     height: 40px;
 }
+
 .playlist-section .desktop-25 .btn-hover:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
 .playlist-section .desktop-25 .content .title {
     color: #fff;
     font-size: 15px;
     margin: 0px;
 }
+
 .playlist-section .desktop-25 .content .title a:hover {
     color: #c273ed;
 }
+
 .playlist-section .desktop-25 .content .subtitle {
     margin: 0px;
 }
+
 .playlist-section .desktop-25 .content .subtitle a {
     font-size: 13px;
-    color: hsla(0,0%,100%,0.5);
+    color: hsla(0, 0%, 100%, 0.5);
 }
+
 .playlist-section .desktop-25 .content .subtitle a:hover {
     color: #c273ed;
     text-decoration: underline;
 }
+
 /* <!--end css playlist-section --> */
