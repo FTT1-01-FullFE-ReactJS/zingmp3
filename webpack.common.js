@@ -15,7 +15,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'discover',
-            filename: 'discover.html',
+            filename: 'index.html',
             template: './src/pages/discover/index.html',
             chunks: ['discover']
         }),

@@ -7,5 +7,7 @@ facebookLoginButton.addEventListener('click', async function() {
     // [Gọi api] tới facebook để xin login
     // Promise
     const data = await signInWithPopup(auth, provider);//10s
-    console.log('ok');
+    console.log({
+      data
+    });
 });
