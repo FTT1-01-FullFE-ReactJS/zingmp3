@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         mymusic: './src/scripts/pages/mymusic/main.js',
-        // discover: './src/scripts/pages/discover/main.js',
-        login: './src/scripts/pages/login/main.js'
+        discover: './src/scripts/pages/discover/main.js',
+        login: './src/scripts/pages/login/main.js',
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -15,7 +15,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'discover',
-            filename: 'discover.html',
+            filename: '/',
             template: './src/pages/discover/index.html',
             chunks: ['discover']
         }),
@@ -62,8 +62,8 @@ module.exports = {
             {
                 test: /\.(svg|png|jpg|gif)$/,
                 use: {
-                loader: 'file-loader',
-                options: {
+                    loader: 'file-loader',
+                    options: {
                         name: "[name].[hash].[ext]",
                         outputPath: "images"
                     }
