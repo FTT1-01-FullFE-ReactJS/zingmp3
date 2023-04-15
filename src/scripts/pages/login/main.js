@@ -20,8 +20,7 @@ function handleFBLogin(data) {
     const token = Cookies.get('accessTokenFromFb');
     if (token == null ) {
         window.location.href = 'login.html'
-    } else if (token) [
+    } else {
         window.location.href = 'discover.html'
-    ]
-
+    }
 };
