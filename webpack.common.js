@@ -5,6 +5,9 @@ module.exports = {
         mymusic: './src/scripts/pages/mymusic/main.js',
         discover: './src/scripts/pages/discover/main.js',
         login: './src/scripts/pages/login/main.js',
+        middleware: './src/scripts/pages/login/middleware.js',
+        zingchat: './src/scripts/pages/zingchat/main.js',
+        album: './src/scripts/pages/album/main.js',
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -15,7 +18,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'discover',
-            filename: '/',
+            filename: 'index.html',
             template: './src/pages/discover/index.html',
             chunks: ['discover']
         }),
