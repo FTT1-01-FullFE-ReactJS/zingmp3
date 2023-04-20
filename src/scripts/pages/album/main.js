@@ -1,2 +1,2 @@
-import { check_token } from "../login/middleware";
-check_token();
+import { checkToken } from "../login/middleware";
+checkToken();

@@ -1,7 +1,8 @@
 import Cookies from 'js-cookie';
-function check_token() {
-   if(!Cookies.get('user_access_token')) {
+function checkToken() {
+    const accessToken = Cookies.get('userAccessToken');
+   if(!accessToken) {
         window.location.href = 'login.html'
    }
 };
-export { check_token };
+export { checkToken };
