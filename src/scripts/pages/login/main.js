@@ -1,6 +1,5 @@
 import Cookies from 'js-cookie';
 import { auth, FacebookAuthProvider, signInWithPopup } from '../../../services/firebase';
-Cookies.set('foo', 'bar');
 const provider = new FacebookAuthProvider();
 const facebookLoginButton = document.getElementById('login-facebook-button');
 
