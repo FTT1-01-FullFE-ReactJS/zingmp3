@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     entry: {
@@ -10,6 +11,7 @@ module.exports = {
         album: './src/scripts/pages/album/main.js',
     },
     plugins: [
+        new Dotenv(),
         new HtmlWebpackPlugin({
             title: 'mymusic',
             filename: 'mymusic.html',

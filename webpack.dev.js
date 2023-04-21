@@ -8,5 +8,8 @@ module.exports = merge(common, {
     filename: '[name].js',
     path: path.resolve(__dirname, "build"),
     chunkFilename: '[id].[chunkhash].js',
+  },
+  devServer: {
+    port: 8080,
   }
 });

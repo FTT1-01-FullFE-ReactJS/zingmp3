@@ -10,7 +10,5 @@ facebookLoginButton.addEventListener('click', async function () {
 
 function handleFBLogin(data) {
     Cookies.set('userAccessToken', data.user.accessToken, { expires: 7 });
-    window.location.href = '/'
+    window.location.href = '/';
 };
-
-
