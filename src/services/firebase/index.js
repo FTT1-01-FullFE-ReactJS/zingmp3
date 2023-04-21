@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore"
 import { FacebookAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 
 import {
@@ -23,5 +24,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const database = getFirestore(app);
 
-export { auth, FacebookAuthProvider, signInWithPopup };
+export { auth, FacebookAuthProvider, signInWithPopup, database };

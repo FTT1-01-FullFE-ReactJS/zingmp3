@@ -9,6 +9,10 @@ module.exports = {
         middleware: './src/scripts/pages/login/middleware.js',
         zingchat: './src/scripts/pages/zingchat/main.js',
         album: './src/scripts/pages/album/main.js',
+        // Admin
+        admin_songs_list: './src/admin/scripts/pages/songs/list/main.js',
+        admin_songs_create: './src/admin/scripts/pages/songs/create/main.js',
+        admin_songs_edit: './src/admin/scripts/pages/songs/edit/main.js',
     },
     plugins: [
         new Dotenv(),
@@ -47,6 +51,25 @@ module.exports = {
             filename: 'login.html',
             template: './src/pages/login/index.html',
             chunks: ['login']
+        }),
+        // ADMIN
+        new HtmlWebpackPlugin({
+            title: 'Admin Song | List',
+            filename: 'admin/songs/list.html',
+            template: './src/admin/pages/songs/list/index.html',
+            chunks: ['admin_songs_list']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Admin Song | Create',
+            filename: 'admin/songs/create.html',
+            template: './src/admin/pages/songs/create/index.html',
+            chunks: ['admin_songs_create']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Admin Song | Edit',
+            filename: 'admin/songs/edit.html',
+            template: './src/admin/pages/songs/edit/index.html',
+            chunks: ['admin_songs_edit']
         }),
     ],
     module: {
