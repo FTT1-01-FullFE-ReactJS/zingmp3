@@ -13,14 +13,15 @@
     <link rel="stylesheet" type="text/css" href="../../styles/common/reset.css">
     <link rel="stylesheet" type="text/css" href="../../styles/common/global.css">
     <link rel="stylesheet" type="text/css" href="../../styles/common/variables.css">
-    <link rel="stylesheet" type="text/css" href="../../styles/pages/mymusic/index.css">
-    <link rel="stylesheet" type="text/css" href="../../styles/common/common.css">
-    <title>mymusic</title>
+    <link rel="stylesheet" href="../../styles/common/common.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/pages/singer/index.css">
+    <title>Singer</title>
 </head>
 
 <body>
     <div id="mymusic-page">
         <div class="page-content">
+            <!-- left-sidebar -->
             <div class="content-left-sidebar">
                 <div class="left-wrapper">
                     <div class="logo-navigation">
@@ -32,10 +33,9 @@
                         <div class="nav-main" style="height: 100%;">
                             <div class="nav-top">
                                 <ul class="menu">
-                                    <li class="item active">
-                                        <a href="">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
-                                                class="mar-r-10">
+                                    <li class="item none">
+                                        <a href="mymusic.html"><svg width="20" height="20" viewBox="0 0 20 20"
+                                                fill="currentColor" class="mar-r-10">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M5.41666 2.29166C5.07148 2.29166 4.79166 2.57148 4.79166 2.91666C4.79166 3.26183 5.07148 3.54166 5.41666 3.54166H14.5833C14.9285 3.54166 15.2083 3.26183 15.2083 2.91666C15.2083 2.57148 14.9285 2.29166 14.5833 2.29166H5.41666ZM2.5 8.33333C2.5 6.60744 3.89911 5.20833 5.625 5.20833H14.375C16.1009 5.20833 17.5 6.60744 17.5 8.33333V14.1667C17.5 15.8925 16.1009 17.2917 14.375 17.2917H5.625C3.89911 17.2917 2.5 15.8925 2.5 14.1667V8.33333ZM5.625 6.45833C4.58947 6.45833 3.75 7.29779 3.75 8.33333V14.1667C3.75 15.2022 4.58946 16.0417 5.625 16.0417H14.375C15.4105 16.0417 16.25 15.2022 16.25 14.1667V8.33333C16.25 7.29779 15.4105 6.45833 14.375 6.45833H5.625ZM12.5 7.3C11.3494 7.3 10.4166 8.23274 10.4166 9.38333V10.8832C10.1041 10.7235 9.75006 10.6333 9.37496 10.6333C8.10931 10.6333 7.0833 11.6594 7.0833 12.925C7.0833 14.1907 8.10931 15.2167 9.37496 15.2167C10.5759 15.2167 11.561 14.293 11.6587 13.1173C11.6639 13.0847 11.6666 13.0513 11.6666 13.0173V9.38333C11.6666 8.92309 12.0397 8.55 12.5 8.55H13.2291C13.5743 8.55 13.8541 8.27018 13.8541 7.925C13.8541 7.57982 13.5743 7.3 13.2291 7.3H12.5ZM8.3333 12.925C8.3333 12.3497 8.79967 11.8833 9.37496 11.8833C9.95026 11.8833 10.4166 12.3497 10.4166 12.925C10.4166 13.5003 9.95026 13.9667 9.37496 13.9667C8.79967 13.9667 8.3333 13.5003 8.3333 12.925Z">
                                                 </path>
@@ -46,7 +46,7 @@
                                             </span>
                                         </a>
                                     </li>
-                                    <li class="none-active">
+                                    <li class="none-active discover">
                                         <a href="/">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
                                                 class="mar-r-10">
@@ -292,6 +292,8 @@
                     </div>
                 </div>
             </div>
+            <!--end left-sidebar -->
+            <!-- zm-header -->
             <header class="zm-header">
                 <div class="level-wrapper">
                     <div class="level-left">
@@ -303,7 +305,7 @@
                         </span>
                         <form class="search" action="">
                             <div class="search__container">
-                                <button class="search__container-submit d-flex-center" type="submit">
+                                <button class="search__container-submit d-flex-center pdl" type="submit">
                                     <i class="fa-solid fa-magnifying-glass icon"></i>
                                 </button>
                                 <div class="input-wrapper">
@@ -419,594 +421,669 @@
                     </div>
                 </div>
             </header>
+            <!-- end zm-header -->
+            <!-- content-main -->
             <div class="content-main">
-                <div style="position: relative; overflow: hidden; width: 100%; height: 100%;">
+                <div class="content">
                     <main class="scrollbar-content">
-                        <div class="my-music">
-                            <div class="overivew">
-                                <div>
-                                    <div class="header-title">
-                                        <div class="text">Thư viện</div>
-                                        <span class="btn">
-                                            <i class="fa-solid fa-play"></i>
-                                        </span>
+                        <div class="container">
+                            <div class="artist-page">
+                                <div class="artist-hero">
+                                    <div class="blur-container">
+                                        <div class="blur">
+                                            <div class="bg-alpha"></div>
+                                        </div>
                                     </div>
-                                    <div class="channel-section">
-                                        <h3 class="child-title">
-                                            <div>
-                                                PLAYLIST
-                                                <span class="button">
-                                                    <i class="fff fa-solid fa-plus"></i>
-                                                </span>
+                                    <div class="hero-body">
+                                        <div class="left">
+                                            <figure class="avatar">
+                                                <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/avatars/8/0/f/e/80fe1452542bf341f45d5eb6b97a389a.jpg"
+                                                    alt="">
+                                            </figure>
+                                            <div class="information">
+                                                <div class="top">
+                                                    <h3>
+                                                        <span>Bùi Lan Hương</span>
+                                                    </h3>
+                                                    <span class="play-btn d-flex-center">
+                                                        <i class="fa-solid fa-play"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="bottom">
+                                                    <span class="follower">14.041 người quan tâm</span>
+                                                    <span class="btn-add">
+                                                        <i class="fa-solid fa-user-plus"></i>
+                                                        <span>Quan tâm</span>
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <a href="">
-                                                Tất cả
-                                                <i class="hsla fa-solid fa-angle-right"></i>
-                                            </a>
-                                        </h3>
-                                        <div class="library-wrapper">
-                                            <div class="library">
-                                                <div class="library-item">
-                                                    <div class="card">
-                                                        <a href="">
-                                                            <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/d/f/f/b/dffb9138ec5bdabb093cf4109945f81b.jpg"
-                                                                alt="">
-                                                            <div class="opacity"></div>
-                                                            <div class="box">
-                                                                <span class="button d-flex-center">
-                                                                    <i
-                                                                        class="fa-solid fa-heart icon20px icon violet"></i>
-                                                                </span>
-                                                                <span class="button d-flex-center">
-                                                                    <i class="fa-solid fa-play icon big-icon fa"></i>
-                                                                </span>
-                                                                <span class="relative button d-flex-center">
-                                                                    <i
-                                                                        class="fa-solid fa-caret-down icon20px icon fa"></i>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="child-menu">
-                                                        <div class="playlist-menu">
-                                                            <ul class="meuu-list">
-                                                                <li>
-                                                                    <a href="">
-                                                                        <i class="fa-solid fa-play"></i>
-                                                                        <span>Thêm vào danh sách phát</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="">
-                                                                        <i class="fa-regular fa-comment"></i>
-                                                                        <span>Bình luận</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="">
-                                                                        <i class="fa-solid fa-arrow-down"></i>
-                                                                        <span>Tải xuống</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="">
-                                                                        <i class="fa-solid fa-link"></i>
-                                                                        <span>Sao chép link</span>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="hover-menu">
-                                                                    <div class="sub-menu">
-                                                                        <a href="">
-                                                                            <i class="fa-solid fa-share"></i>
-                                                                            <span>Chia sẻ</span>
-                                                                            <i class="fa-solid fa-angle-right"
-                                                                                style="margin-left: auto; margin-right: 0;"></i>
-                                                                        </a>
-                                                                        <div class="submenu-content">
-                                                                            <ul class="menu-list">
-                                                                                <li>
-                                                                                    <a href="">
-                                                                                        <i
-                                                                                            class="fa-brands fa-facebook"></i>
-                                                                                        <span>Facebook</span>
-                                                                                    </a>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <a href="">
-                                                                                        <i
-                                                                                            class="fa-brands fa-instagram"></i>
-                                                                                        <span>Instagram</span>
-                                                                                    </a>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <a href="">
-                                                                                        <i class="fa-solid fa-code"></i>
-                                                                                        <span>Code</span>
-                                                                                    </a>
-                                                                                </li>
-                                                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="artist-home-content">
+                                    <div class="top-section-container">
+                                        <div class="container-2">
+                                            <h3 class="title">
+                                                <span class="text"> Bài Hát Nổi Bật</span>
+                                                <a class="btn-playlist" href="">
+                                                    Tất cả
+                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                </a>
+                                            </h3>
+                                            <div class="columns">
+                                                <div class="column">
+                                                    <div class="list">
+                                                        <div class="list-item">
+                                                            <div class="media">
+                                                                <div class="media-left">
+                                                                    <div class="song-thumb">
+                                                                        <figure>
+                                                                            <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/4/a/d/0/4ad0fd203431fd51343b2d46d5029db0.jpg"
+                                                                                alt="">
+                                                                        </figure>
+                                                                        <div class="opacity"></div>
+                                                                        <div class="box">
+                                                                            <div class="box-actions">
+                                                                                <i class="white fa-solid fa-play"></i>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                </li>
-                                                            </ul>
+                                                                    <div class="card-info">
+                                                                        <div class="title-wrapper">
+                                                                            <div class="title">
+                                                                                <span>Ngày Chưa Giông Bão (Người Bất Tử
+                                                                                    OST)</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <h3 class="subtitle">
+                                                                            <a href="">Bùi Lan Hương</a>
+                                                                        </h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="media-right">
+                                                                    <div class="hover-items">
+                                                                        <div class="level">
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="white fa-solid fa-microphone"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item">
+                                                                                <span class="btn dadada">
+                                                                                    <i
+                                                                                        class="violet fa-solid fa-heart"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="white fa-regular fa-comment-dots"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="action-items">
+                                                                        <div class="level">
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="violet fa-solid fa-heart"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item duration">03:32</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="card-content">
-                                                        <div class="title">
-                                                            <a href="">Bolero Tình Yêu</a>
+                                                        <div class="list-item">
+                                                            <div class="media">
+                                                                <div class="media-left">
+                                                                    <div class="song-thumb">
+                                                                        <figure>
+                                                                            <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/4/a/d/0/4ad0fd203431fd51343b2d46d5029db0.jpg"
+                                                                                alt="">
+                                                                        </figure>
+                                                                        <div class="opacity"></div>
+                                                                        <div class="box">
+                                                                            <div class="box-actions">
+                                                                                <i class="white fa-solid fa-play"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-info">
+                                                                        <div class="title-wrapper">
+                                                                            <div class="title">
+                                                                                <span>Ngày Chưa Giông Bão (Người Bất Tử
+                                                                                    OST)</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <h3 class="subtitle">
+                                                                            <a href="">Bùi Lan Hương</a>
+                                                                        </h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="media-right">
+                                                                    <div class="hover-items">
+                                                                        <div class="level">
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="white fa-solid fa-microphone"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item">
+                                                                                <span class="btn dadada">
+                                                                                    <i
+                                                                                        class="violet fa-solid fa-heart"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="white fa-regular fa-comment-dots"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="action-items">
+                                                                        <div class="level">
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="violet fa-solid fa-heart"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item duration">03:32</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="subtitle">Zing MP3</div>
+                                                        <div class="list-item">
+                                                            <div class="media">
+                                                                <div class="media-left">
+                                                                    <div class="song-thumb">
+                                                                        <figure>
+                                                                            <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/4/a/d/0/4ad0fd203431fd51343b2d46d5029db0.jpg"
+                                                                                alt="">
+                                                                        </figure>
+                                                                        <div class="opacity"></div>
+                                                                        <div class="box">
+                                                                            <div class="box-actions">
+                                                                                <i class="white fa-solid fa-play"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-info">
+                                                                        <div class="title-wrapper">
+                                                                            <div class="title">
+                                                                                <span>Ngày Chưa Giông Bão (Người Bất Tử
+                                                                                    OST)</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <h3 class="subtitle">
+                                                                            <a href="">Bùi Lan Hương</a>
+                                                                        </h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="media-right">
+                                                                    <div class="hover-items">
+                                                                        <div class="level">
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="white fa-solid fa-microphone"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item">
+                                                                                <span class="btn dadada">
+                                                                                    <i
+                                                                                        class="violet fa-solid fa-heart"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="white fa-regular fa-comment-dots"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="action-items">
+                                                                        <div class="level">
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="violet fa-solid fa-heart"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item duration">03:32</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="library-item">
-                                                    <div class="card">
-                                                        <a href="">
-                                                            <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/c/5/2/e/c52e2685ec834861c81c120e99607600.jpg"
-                                                                alt="">
-                                                            <div class="opacity"></div>
-                                                            <div class="box">
-                                                                <span class="button d-flex-center">
-                                                                    <i
-                                                                        class="fa-solid fa-heart icon20px icon violet"></i>
-                                                                </span>
-                                                                <span class="button d-flex-center">
-                                                                    <i class="fa-solid fa-play icon big-icon fa"></i>
-                                                                </span>
-                                                                <span class="button d-flex-center">
-                                                                    <i
-                                                                        class="fa-solid fa-caret-down icon20px icon fa"></i>
-                                                                </span>
+                                                <div class="column">
+                                                    <div class="list">
+                                                        <div class="list-item">
+                                                            <div class="media">
+                                                                <div class="media-left">
+                                                                    <div class="song-thumb">
+                                                                        <figure>
+                                                                            <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/4/a/d/0/4ad0fd203431fd51343b2d46d5029db0.jpg"
+                                                                                alt="">
+                                                                        </figure>
+                                                                        <div class="opacity"></div>
+                                                                        <div class="box">
+                                                                            <div class="box-actions">
+                                                                                <i class="white fa-solid fa-play"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-info">
+                                                                        <div class="title-wrapper">
+                                                                            <div class="title">
+                                                                                <span>Ngày Chưa Giông Bão (Người Bất Tử
+                                                                                    OST)</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <h3 class="subtitle">
+                                                                            <a href="">Bùi Lan Hương</a>
+                                                                        </h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="media-right">
+                                                                    <div class="hover-items">
+                                                                        <div class="level">
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="white fa-solid fa-microphone"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item">
+                                                                                <span class="btn dadada">
+                                                                                    <i
+                                                                                        class="violet fa-solid fa-heart"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="white fa-regular fa-comment-dots"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="action-items">
+                                                                        <div class="level">
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="violet fa-solid fa-heart"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item duration">03:32</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="card-content">
-                                                        <div class="title">
-                                                            <a href="">Bolero Cuối Tuần</a>
                                                         </div>
-                                                        <div class="subtitle">Zing MP3</div>
+                                                        <div class="list-item">
+                                                            <div class="media">
+                                                                <div class="media-left">
+                                                                    <div class="song-thumb">
+                                                                        <figure>
+                                                                            <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/4/a/d/0/4ad0fd203431fd51343b2d46d5029db0.jpg"
+                                                                                alt="">
+                                                                        </figure>
+                                                                        <div class="opacity"></div>
+                                                                        <div class="box">
+                                                                            <div class="box-actions">
+                                                                                <i class="white fa-solid fa-play"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-info">
+                                                                        <div class="title-wrapper">
+                                                                            <div class="title">
+                                                                                <span>Ngày Chưa Giông Bão (Người Bất Tử
+                                                                                    OST)</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <h3 class="subtitle">
+                                                                            <a href="">Bùi Lan Hương</a>
+                                                                        </h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="media-right">
+                                                                    <div class="hover-items">
+                                                                        <div class="level">
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="white fa-solid fa-microphone"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item">
+                                                                                <span class="btn dadada">
+                                                                                    <i
+                                                                                        class="violet fa-solid fa-heart"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="white fa-regular fa-comment-dots"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="action-items">
+                                                                        <div class="level">
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="violet fa-solid fa-heart"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item duration">03:32</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="list-item">
+                                                            <div class="media">
+                                                                <div class="media-left">
+                                                                    <div class="song-thumb">
+                                                                        <figure>
+                                                                            <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/4/a/d/0/4ad0fd203431fd51343b2d46d5029db0.jpg"
+                                                                                alt="">
+                                                                        </figure>
+                                                                        <div class="opacity"></div>
+                                                                        <div class="box">
+                                                                            <div class="box-actions">
+                                                                                <i class="white fa-solid fa-play"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-info">
+                                                                        <div class="title-wrapper">
+                                                                            <div class="title">
+                                                                                <span>Ngày Chưa Giông Bão (Người Bất Tử
+                                                                                    OST)</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <h3 class="subtitle">
+                                                                            <a href="">Bùi Lan Hương</a>
+                                                                        </h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="media-right">
+                                                                    <div class="hover-items">
+                                                                        <div class="level">
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="white fa-solid fa-microphone"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item">
+                                                                                <span class="btn dadada">
+                                                                                    <i
+                                                                                        class="violet fa-solid fa-heart"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="white fa-regular fa-comment-dots"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="action-items">
+                                                                        <div class="level">
+                                                                            <div class="level-item">
+                                                                                <span class="btn d-flex-center">
+                                                                                    <i
+                                                                                        class="violet fa-solid fa-heart"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                            <div class="level-item duration">03:32</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="bottom-section">
-                                        <nav class="navbar">
-                                            <div class="navber-container">
-                                                <ul class="menu">
-                                                    <li class="item is-active">
-                                                        <a href="">BÀI HÁT</a>
-                                                    </li>
-                                                    <li class="item text">
-                                                        <a href="">PODCAST</a>
-                                                    </li>
-                                                    <li class="item text">
-                                                        <a href="">ALBUM</a>
-                                                    </li>
-                                                    <li class="item text">
-                                                        <a href="">MV</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </nav>
-                                        <div>
-                                            <div class="nav-btn">
-                                                <a class="item active" href="">Yêu thích</a>
-                                                <a class="item hover" href="">Đã tải lên</a>
-                                            </div>
-                                            <div class="library-song">
-                                                <div class="list-song">
-                                                    <div class="media">
-                                                        <div class="media-left">
-                                                            <div class="sort-wrapper">
-                                                                <div class="column-text">Bài hát</div>
+                                    <div class="playlist-section">
+                                        <div class="container-playlist-section">
+                                            <h3 class="title-playlist title-2">Single & EP</h3>
+                                            <div class="carousel-wrapper">
+                                                <div class="carousel">
+                                                    <div class="carousel-container">
+                                                        <!-- list-carousel -->
+                                                        <div class="carousel-item desktop-25">
+                                                            <div class="playlist-wrapper">
+                                                                <div class="card">
+                                                                    <a href="">
+                                                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/3/d/d/1/3dd1c2b04d492faaefe5ef251cb6246b.jpg"
+                                                                            alt="">
+                                                                        <div class="opacity"></div>
+                                                                        <div class="box">
+                                                                            <span class="btn-hover d-flex-center">
+                                                                                <i
+                                                                                    class="fff fa-regular fa-heart fs icon-hover mgr"></i>
+                                                                            </span>
+                                                                            <span
+                                                                                class="icon-play icon-play-2 d-flex-center">
+                                                                                <i class="fa-solid fa-play big-icon fa"
+                                                                                    aria-hidden="true"></i>
+                                                                            </span>
+                                                                            <span class="btn-hover d-flex-center">
+                                                                                <i
+                                                                                    class="fff fa-sharp fa-solid fa-caret-down fs icon-hover"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="content">
+                                                                    <h4 class="title ">
+                                                                        <a href="">Hit-Maker: Đạt G</a>
+                                                                    </h4>
+                                                                    <h3 class="subtitle">
+                                                                        <a href="">Đạt G,</a>
+                                                                        <a href=""> Chi Pu,</a>
+                                                                        <a href=""> Dương Hoàng Yến...</a>
+                                                                    </h3>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="media-center">
-                                                            <div class="column-text mar-l-10">Album</div>
+                                                        <div class="carousel-item desktop-25">
+                                                            <div class="playlist-wrapper">
+                                                                <div class="card">
+                                                                    <a href="">
+                                                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/0/a/9/e/0a9e43f3bc9346957f2750d2f1c0fb32.jpg"
+                                                                            alt="">
+                                                                        <div class="opacity"></div>
+                                                                        <div class="box">
+                                                                            <span class="btn-hover d-flex-center">
+                                                                                <i
+                                                                                    class="fff fa-regular fa-heart fs icon-hover mgr"></i>
+                                                                            </span>
+                                                                            <span
+                                                                                class="icon-play icon-play-2 d-flex-center">
+                                                                                <i class="fa-solid fa-play big-icon fa"
+                                                                                    aria-hidden="true"></i>
+                                                                            </span>
+                                                                            <span class="btn-hover d-flex-center">
+                                                                                <i
+                                                                                    class="fff fa-sharp fa-solid fa-caret-down fs icon-hover"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="content">
+                                                                    <h4 class="title ">
+                                                                        <a href="">V-Pop: 100 Hits Thập Niên</a>
+                                                                    </h4>
+                                                                    <h3 class="subtitle">
+                                                                        <a href="">Noo Phước Thịnh,</a>
+                                                                        <a href=""> Hương Tràm
+                                                                            <i class="fa-solid fa-star"></i>,</a>
+                                                                        <a href=""> ERIK
+                                                                            <i class="fa-solid fa-star"></i>
+                                                                        </a>
+                                                                    </h3>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="media-right">
-                                                            <div class="column-text"> Thời gian</div>
+                                                        <div class="carousel-item desktop-25">
+                                                            <div class="playlist-wrapper">
+                                                                <div class="card">
+                                                                    <a href="">
+                                                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/0/8/3/4/0834f695b6f3666e705401e005bf97e8.jpg"
+                                                                            alt="">
+                                                                        <div class="opacity"></div>
+                                                                        <div class="box">
+                                                                            <span class="btn-hover d-flex-center">
+                                                                                <i
+                                                                                    class="fff fa-regular fa-heart fs icon-hover mgr"></i>
+                                                                            </span>
+                                                                            <span
+                                                                                class="icon-play icon-play-2 d-flex-center">
+                                                                                <i class="fa-solid fa-play big-icon fa"
+                                                                                    aria-hidden="true"></i>
+                                                                            </span>
+                                                                            <span class="btn-hover d-flex-center">
+                                                                                <i
+                                                                                    class="fff fa-sharp fa-solid fa-caret-down fs icon-hover"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="content">
+                                                                    <h4 class="title ">
+                                                                        <a href="">Những Bản Hit Chậm Mà Chắc</a>
+                                                                    </h4>
+                                                                    <h3 class="subtitle">
+                                                                        <a href="">Phan Mạnh Quỳnh,</a>
+                                                                        <a href=""> buitruonglinh</a>
+                                                                    </h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="carousel-item desktop-25">
+                                                            <div class="playlist-wrapper">
+                                                                <div class="card">
+                                                                    <a href="">
+                                                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/d/c/d/f/dcdf4d30f892d984c12d5a639283996c.jpg"
+                                                                            alt="">
+                                                                        <div class="opacity"></div>
+                                                                        <div class="box">
+                                                                            <span class="btn-hover d-flex-center">
+                                                                                <i
+                                                                                    class="fff fa-regular fa-heart fs icon-hover mgr"></i>
+                                                                            </span>
+                                                                            <span
+                                                                                class="icon-play icon-play-2 d-flex-center">
+                                                                                <i class="fa-solid fa-play big-icon fa"
+                                                                                    aria-hidden="true"></i>
+                                                                            </span>
+                                                                            <span class="btn-hover d-flex-center">
+                                                                                <i
+                                                                                    class="fff fa-sharp fa-solid fa-caret-down fs icon-hover"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="content">
+                                                                    <h4 class="title ">
+                                                                        <a href="">Hit-Maker Nổi Bật</a>
+                                                                    </h4>
+                                                                    <h3 class="subtitle">
+                                                                        <a href="">LYLY,</a>
+                                                                        <a href=""> DTAP,</a>
+                                                                        <a href=""> RIN9</a>
+                                                                    </h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="carousel-item desktop-25">
+                                                            <div class="playlist-wrapper">
+                                                                <div class="card">
+                                                                    <a href="">
+                                                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/3/f/f/0/3ff09c937cebb4baf930abe7eb02074c.jpg"
+                                                                            alt="">
+                                                                        <div class="opacity"></div>
+                                                                        <div class="box">
+                                                                            <span class="btn-hover d-flex-center">
+                                                                                <i
+                                                                                    class="fff fa-regular fa-heart fs icon-hover mgr"></i>
+                                                                            </span>
+                                                                            <span
+                                                                                class="icon-play icon-play-2 d-flex-center">
+                                                                                <i class="fa-solid fa-play big-icon fa"
+                                                                                    aria-hidden="true"></i>
+                                                                            </span>
+                                                                            <span class="btn-hover d-flex-center">
+                                                                                <i
+                                                                                    class="fff fa-sharp fa-solid fa-caret-down fs icon-hover"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="content">
+                                                                    <h4 class="title ">
+                                                                        <a href="">V-Pop: Hits Quốc Dân</a>
+                                                                    </h4>
+                                                                    <h3 class="subtitle">
+                                                                        <a href="">ERIK
+                                                                            <i class="fa-solid fa-star"></i>,
+                                                                        </a>
+                                                                        <a href=""> Hoàng Thùy Linh,</a>
+                                                                        <a href=""> MONO</a>
+                                                                    </h3>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <!-- begin:: Music Item -->
-                                                        <div class="select-item">
-                                                            <div class="container-checkbox-wrapper">
-                                                                <label class="container-checkbox">
-                                                                    <input type="checkbox" checked="checked">
-                                                                    <span class="checkmark"></span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="list-item">
-                                                                <div class="media">
-                                                                    <div class="media-left" style="height: 40px;">
-                                                                        <div class="song-icon">
-                                                                            <i class="fa-solid fa-music"></i>
-                                                                        </div>
-                                                                        <div class="song-thumb">
-                                                                            <a class="farther" href="">
-                                                                                <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/b/7/7/2/b772836b2679fe262497b4b3d7357d76.jpg"
-                                                                                    alt="">
-                                                                                <div class="opacity"></div>
-                                                                                <div class="box">
-                                                                                    <i class="fa-solid fa-play"></i>
-                                                                                </div>
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="card-info">
-                                                                            <div class="title">
-                                                                                <span>Dĩ Vãng Nhạt Nhòa</span>
-                                                                            </div>
-                                                                            <div class="subtitle">
-                                                                                <a href="">Hoàng Tôn,</a>
-                                                                                <a href=""> Đạt G,</a>
-                                                                                <a href=""> So Hi</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="media-center">
-                                                                        <div class="album-info">
-                                                                            <a href="">Dĩ Vãng Nhạt Nhòa (Single)</a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="media-right">
-                                                                        <div class="hover-items">
-                                                                            <div class="level">
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-tv icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-microphone icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-heart violet"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-caret-down icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="action-items">
-                                                                            <span class="button d-flex-center">
-                                                                                <i class="fa-solid fa-heart violet"></i>
-                                                                            </span>
-                                                                            <div class="text">4 : 03</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="select-item">
-                                                            <div class="container-checkbox-wrapper">
-                                                                <label class="container-checkbox">
-                                                                    <input type="checkbox" checked="checked">
-                                                                    <span class="checkmark"></span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="list-item">
-                                                                <div class="media">
-                                                                    <div class="media-left" style="height: 40px;">
-                                                                        <div class="song-icon">
-                                                                            <i class="fa-solid fa-music"></i>
-                                                                        </div>
-                                                                        <div class="song-thumb">
-                                                                            <a class="farther" href="">
-                                                                                <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/4/a/d/0/4ad0fd203431fd51343b2d46d5029db0.jpg"
-                                                                                    alt="">
-                                                                                <div class="opacity"></div>
-                                                                                <div class="box">
-                                                                                    <i class="fa-solid fa-play"></i>
-                                                                                </div>
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="card-info">
-                                                                            <div class="title">
-                                                                                <span>Ngày Chưa Giông Bão (Người Bất Tử
-                                                                                    OST)</span>
-                                                                            </div>
-                                                                            <div class="subtitle">
-                                                                                <a href="singer.html">Bùi Lan Hương</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="media-center">
-                                                                        <div class="album-info">
-                                                                            <a href="album.html">Ngày Chưa Giông Bão
-                                                                                (Người Bất Tử OST) (Single)</a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="media-right">
-                                                                        <div class="hover-items">
-                                                                            <div class="level">
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-tv icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-microphone icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-heart violet"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-caret-down icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="action-items">
-                                                                            <span class="button d-flex-center">
-                                                                                <i class="fa-solid fa-heart violet"></i>
-                                                                            </span>
-                                                                            <div class="text">4 : 03</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="select-item">
-                                                            <div class="container-checkbox-wrapper">
-                                                                <label class="container-checkbox">
-                                                                    <input type="checkbox" checked="checked">
-                                                                    <span class="checkmark"></span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="list-item">
-                                                                <div class="media">
-                                                                    <div class="media-left" style="height: 40px;">
-                                                                        <div class="song-icon">
-                                                                            <i class="fa-solid fa-music"></i>
-                                                                        </div>
-                                                                        <div class="song-thumb">
-                                                                            <a class="farther" href="">
-                                                                                <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/b/7/7/2/b772836b2679fe262497b4b3d7357d76.jpg"
-                                                                                    alt="">
-                                                                                <div class="opacity"></div>
-                                                                                <div class="box">
-                                                                                    <i class="fa-solid fa-play"></i>
-                                                                                </div>
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="card-info">
-                                                                            <div class="title">
-                                                                                <span>Dĩ Vãng Nhạt Nhòa</span>
-                                                                            </div>
-                                                                            <div class="subtitle">
-                                                                                <a href="">Hoàng Tôn,</a>
-                                                                                <a href=""> Đạt G,</a>
-                                                                                <a href=""> So Hi</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="media-center">
-                                                                        <div class="album-info">
-                                                                            <a href="">Dĩ Vãng Nhạt Nhòa (Single)</a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="media-right">
-                                                                        <div class="hover-items">
-                                                                            <div class="level">
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-tv icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-microphone icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-heart violet"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-caret-down icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="action-items">
-                                                                            <span class="button d-flex-center">
-                                                                                <i class="fa-solid fa-heart violet"></i>
-                                                                            </span>
-                                                                            <div class="text">4 : 03</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end:: Music Item -->
-
-                                                        <!-- begin:: Music Item -->
-                                                        <div class="select-item">
-                                                            <div class="container-checkbox-wrapper">
-                                                                <label class="container-checkbox">
-                                                                    <input type="checkbox" checked="checked">
-                                                                    <span class="checkmark"></span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="list-item">
-                                                                <div class="media">
-                                                                    <div class="media-left" style="height: 40px;">
-                                                                        <div class="song-icon">
-                                                                            <i class="fa-solid fa-music"></i>
-                                                                        </div>
-                                                                        <div class="song-thumb">
-                                                                            <a class="farther" href="">
-                                                                                <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/b/7/7/2/b772836b2679fe262497b4b3d7357d76.jpg"
-                                                                                    alt="">
-                                                                                <div class="opacity"></div>
-                                                                                <div class="box">
-                                                                                    <i class="fa-solid fa-play"></i>
-                                                                                </div>
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="card-info">
-                                                                            <div class="title">
-                                                                                <span>Dĩ Vãng Nhạt Nhòa</span>
-                                                                            </div>
-                                                                            <div class="subtitle">
-                                                                                <a href="">Hoàng Tôn,</a>
-                                                                                <a href=""> Đạt G,</a>
-                                                                                <a href=""> So Hi</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="media-center">
-                                                                        <div class="album-info">
-                                                                            <a href="">Dĩ Vãng Nhạt Nhòa (Single)</a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="media-right">
-                                                                        <div class="hover-items">
-                                                                            <div class="level">
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-tv icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-microphone icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-heart violet"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-caret-down icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="action-items">
-                                                                            <span class="button d-flex-center">
-                                                                                <i class="fa-solid fa-heart violet"></i>
-                                                                            </span>
-                                                                            <div class="text">4 : 03</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end:: Music Item -->
-
-                                                        <!-- begin:: Music Item -->
-                                                        <div class="select-item">
-                                                            <div class="container-checkbox-wrapper">
-                                                                <label class="container-checkbox">
-                                                                    <input type="checkbox" checked="checked">
-                                                                    <span class="checkmark"></span>
-                                                                </label>
-                                                            </div>
-                                                            <div class="list-item">
-                                                                <div class="media">
-                                                                    <div class="media-left" style="height: 40px;">
-                                                                        <div class="song-icon">
-                                                                            <i class="fa-solid fa-music"></i>
-                                                                        </div>
-                                                                        <div class="song-thumb">
-                                                                            <a class="farther" href="">
-                                                                                <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/b/7/7/2/b772836b2679fe262497b4b3d7357d76.jpg"
-                                                                                    alt="">
-                                                                                <div class="opacity"></div>
-                                                                                <div class="box">
-                                                                                    <i class="fa-solid fa-play"></i>
-                                                                                </div>
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="card-info">
-                                                                            <div class="title">
-                                                                                <span>Dĩ Vãng Nhạt Nhòa</span>
-                                                                            </div>
-                                                                            <div class="subtitle">
-                                                                                <a href="">Hoàng Tôn,</a>
-                                                                                <a href=""> Đạt G,</a>
-                                                                                <a href=""> So Hi</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="media-center">
-                                                                        <div class="album-info">
-                                                                            <a href="">Dĩ Vãng Nhạt Nhòa (Single)</a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="media-right">
-                                                                        <div class="hover-items">
-                                                                            <div class="level">
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-tv icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-microphone icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-heart violet"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="level-item">
-                                                                                    <span class="button d-flex-center">
-                                                                                        <i
-                                                                                            class="fa-solid fa-caret-down icon"></i>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="action-items">
-                                                                            <span class="button d-flex-center">
-                                                                                <i class="fa-solid fa-heart violet"></i>
-                                                                            </span>
-                                                                            <div class="text">4 : 03</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- end:: Music Item -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="channel-section">
+                                        <div class="artist-biography">
+                                            <h3 class="title">Về Bùi Lan Hương</h3>
+                                            <div class="content">
+                                                <div class="left">
+                                                    <figure class="image">
+                                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_webp/avatars/8/0/f/e/80fe1452542bf341f45d5eb6b97a389a.jpg"
+                                                            alt="">
+                                                    </figure>
+                                                </div>
+                                                <div class="right">
+                                                    <div class="description">
+                                                        <span>Bùi Lan Hương còn có nghệ danh Helena Bui. </span>
+                                                        <span>Cô đỗ thủ khoa và tốt nghiệp Á khoa Thính phòng/Opera tại
+                                                            Học</span>
+                                                        <span>viện Âm nhạc Quốc gia Việt Nam </span>
+                                                        <span>Sau đó, cô theo học khoa Thanh nhạc & biểu diễn Jazz tại
+                                                            trường</span>
+                                                        <span>Lasalle College of the Arts, Singapore.</span>
+                                                        <span>Không chỉ có khả năng ca hát, cô còn tự sáng tác nhiều ca
+                                                            khúc</span>
+                                                        <span>của mình... Xem Thêm</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1018,118 +1095,8 @@
                     </main>
                 </div>
             </div>
-            <div class="playing-song">
-                <div class="control-wrapper">
-                    <div class="container">
-                        <!-- control-left -->
-                        <div class="control-left">
-                            <div class="control-media">
-                                <div class="media-wrapper">
-                                    <div class="media-left">
-                                        <div class="img">
-                                            <figure>
-                                                <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/4/a/d/0/4ad0fd203431fd51343b2d46d5029db0.jpg"
-                                                    alt="">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="media-center">
-                                        <div class="song-title">
-                                            <a href="">
-                                                <span class="title" style="white-space: nowrap;">Ngày Chưa Giông Bão
-                                                    (Người Bất Tử OST)</span>
-                                            </a>
-                                        </div>
-                                        <h3 class="subtitle">
-                                            <a href="">Bùi Lan Hương</a>
-                                        </h3>
-                                    </div>
-                                    <div class="media-right">
-                                        <div class="level-wrapper">
-                                            <div class="level-item">
-                                                <span  class="button d-flex-center">
-                                                    <i class="fa-solid fa-heart violet"></i>
-                                                </span>
-                                            </div>
-                                            <div class="level-item">
-                                                <span  class="button d-flex-center">
-                                                    <i class="fa-solid fa-comment-dots" style="color:  #fff;"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- control-center -->
-                        <div class="control-center">
-                            <div class="level-item">
-                                <div class="actions">
-                                    <div class="button">
-                                        <i class="fa-solid fa-shuffle icon dadada hover"></i>
-                                    </div>
-                                    <div class="button">
-                                        <i class="fa-solid fa-backward-fast icon fs20px hover"></i>
-                                    </div>
-                                    <div class="button">
-                                        <i class="fa-solid fa-play big-icon dadada button1" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="button">
-                                        <i class="fa-solid fa-forward-fast icon fs20px hover dadada"></i>
-                                    </div>
-                                    <div class="button">
-                                        <i class="fa-solid fa-repeat icon dadada hover"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="level-item">
-                                <span class="time left">01:23</span>
-                                <div class="bar">
-                                    <div class="slider-bar">
-                                        <div class="bar-child"></div>
-                                    </div>
-                                </div>
-                                <span class="time right">03:32</span>
-                            </div>
-                        </div>
-                        <!-- control-right -->
-                        <div class="control-right">
-                            <div class="level-item">
-                                <span class="button d-flex-center">
-                                    <i class="fa-solid fa-tv"></i>
-                                </span>
-                            </div>
-                            <div class="level-item">
-                                <span class="button d-flex-center">
-                                    <i class="fa-solid fa-microphone"></i>
-                                </span>
-                            </div>
-                            <div class="level-item">
-                                <span class="button d-flex-center">
-                                    <i class="fa-solid fa-window-restore"></i>
-                                </span>
-                            </div>
-                            <div class="level-item">
-                                <span class="button d-flex-center">
-                                    <i class="fa-solid fa-volume-xmark"></i>
-                                </span>
-                                <div class="bar"></div>
-                            </div>
-                            <div class="level-item">
-                                <span class="divide"></span>
-                            </div>
-                            <div class="level-item">
-                                <span class="hover">
-                                    <i class="fa-solid fa-list"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-</div>
     <script src="https://kit.fontawesome.com/fcf4dc9b75.js" crossorigin="anonymous"></script>
 </body>
 
