@@ -3,8 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         mymusic: './src/scripts/pages/mymusic/main.js',
-        // discover: './src/scripts/pages/discover/main.js',
-        login: './src/scripts/pages/login/main.js'
+        discover: './src/scripts/pages/discover/main.js',
+        login: './src/scripts/pages/login/main.js',
+        middleware: './src/scripts/pages/login/middleware.js',
+        zingchat: './src/scripts/pages/zingchat/main.js',
+        album: './src/scripts/pages/album/main.js',
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -62,8 +65,8 @@ module.exports = {
             {
                 test: /\.(svg|png|jpg|gif)$/,
                 use: {
-                loader: 'file-loader',
-                options: {
+                    loader: 'file-loader',
+                    options: {
                         name: "[name].[hash].[ext]",
                         outputPath: "images"
                     }

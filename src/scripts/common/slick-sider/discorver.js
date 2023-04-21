@@ -13,3 +13,4 @@ $('.list-item-2').slick({
   autoplay: true,
   autoplaySpeed: 1000,
 });
+
