@@ -9,7 +9,9 @@ module.exports = {
         zingchat: './src/scripts/pages/zingchat/main.js',
         album: './src/scripts/pages/album/main.js',
         // ADMIN
-        admins_pages_songs_create:'./src/admins/scripts/pages/songs/create/main.js'
+        admins_pages_songs_create_song:'./src/admins/scripts/pages/songs/create/create-song/main.js',
+        admins_pages_songs_create_album:'./src/admins/scripts/pages/songs/create/create-album/main.js',
+        admins_pages_songs_create_albums_songs:'./src/admins/scripts/pages/songs/create/create-albums-songs/main.js',
     },
     plugins: [
         new Dotenv(),
@@ -51,10 +53,22 @@ module.exports = {
         }),
         // ADMIN
         new HtmlWebpackPlugin({
-            title: 'Admin Song | Create',
-            filename: 'admins/pages/songs/create.html',
-            template: './src/admins/pages/songs/create/index.html',
-            chunks: ['admins_pages_songs_create']
+            title: 'Admin Song | Create-song',
+            filename: 'admins/pages/songs/create-song.html',
+            template: './src/admins/pages/songs/create/create-song/index.html',
+            chunks: ['admins_pages_songs_create_song']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Admin Song | Create-album',
+            filename: 'admins/pages/songs/create-album.html',
+            template: './src/admins/pages/songs/create/create-album/index.html',
+            chunks: ['admins_pages_songs_create_album']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Admin Song | Create-albums-songs',
+            filename: 'admins/pages/songs/create-albums-songs.html',
+            template: './src/admins/pages/songs/create/create-albums-songs/index.html',
+            chunks: ['admins_pages_songs_create_albums_songs']
         }),
         new HtmlWebpackPlugin({
             title: 'Admin Song | Edit',
