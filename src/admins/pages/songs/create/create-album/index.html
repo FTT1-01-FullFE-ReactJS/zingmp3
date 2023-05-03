@@ -5,19 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../../../style/pages/songs/create/index.css">
+    <title>Admin Song | Create - Album</title>
 </head>
 
 <body>
-    <form id="create-album-form">
-        <label for="album-name">Album Name:</label>
-        <input type="text" id="album-name" name="album-name" required>
-
-        <label for="release-at">Release-at</label>
-        <input type="text" id="release-at" name="release-at" required>
-
-        <button type="submit">Create</button>
-    </form>
+    <section id="form-wrapper">
+        <div class="bg-blur"></div>
+        <div class="bg-apha"></div>
+        <div class="form-box">
+            <div class="form-value">
+                <div class="img">
+                    <img src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg" alt="">
+                </div>
+                <form id="song-form" action="">
+                    <div class="form-group">
+                        <input type="text" id="album-name" name="album-name" required>
+                        <label for="album-name">Album Name:</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="release-at" name="release-at" required>
+                        <label for="release-at">Release-at</label>
+                    </div>
+                    <button type="submit">Create</button>
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

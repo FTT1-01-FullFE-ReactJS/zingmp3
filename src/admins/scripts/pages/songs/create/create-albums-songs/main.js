@@ -5,7 +5,7 @@ import { DATABASE_NAME_ALBUM_SONG } from "../../../../../../services/firebase/da
 import { v4 as uuidv4 } from 'uuid';
 
 function createAlbumSong() {
-    const createAlbumSongForm = document.querySelector('#formCreateAlbumSong');
+    const createAlbumSongForm = document.querySelector('#form-wrapper');
     createAlbumSongForm.addEventListener('submit', function (event) {
         event.preventDefault();
         const albumIDValue = document.querySelector('#albums-id').value;

@@ -4,14 +4,13 @@ import { DATABASE_NAME_ALBUM } from "../../../../../.././services/firebase/datab
 import { v4 as uuidv4 } from 'uuid';
 
 function createAlbum() {
-    const createAlbumForm = document.querySelector('#create-album-form');
+    const createAlbumForm = document.querySelector('#form-wrapper');
     createAlbumForm.addEventListener('submit', function(event){
         event.preventDefault();
         const albumNameValue = document.querySelector('#album-name').value;
         const albumReleaseAtValue = document.querySelector('#release-at').value
         sendRequestSongToFirebase(albumNameValue, albumReleaseAtValue);
     });
-
 };
 async function sendRequestSongToFirebase(albumNameValue, albumReleaseAtValue){
     try {
