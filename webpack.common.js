@@ -9,9 +9,9 @@ module.exports = {
         zingchat: './src/scripts/pages/zingchat/main.js',
         album: './src/scripts/pages/album/main.js',
         // ADMIN
-        admins_pages_songs_create_song:'./src/admins/scripts/pages/songs/create/create-song/main.js',
-        admins_pages_songs_create_album:'./src/admins/scripts/pages/songs/create/create-album/main.js',
-        admins_pages_songs_create_albums_songs:'./src/admins/scripts/pages/songs/create/create-albums-songs/main.js',
+        admins_pages_songs_create:'./src/admins/scripts/pages/songs/create/main.js',
+        admins_pages_album_create:'./src/admins/scripts/pages/album/create/main.js',
+        admins_pages_albums_songs_create:'./src/admins/scripts/pages/albums-songs/create/main.js',
     },
     plugins: [
         new Dotenv(),
@@ -52,36 +52,69 @@ module.exports = {
             chunks: ['login']
         }),
         // ADMIN
+            // pages songs
         new HtmlWebpackPlugin({
-            title: 'Admin Song | Create-song',
+            title: 'Admin Song | Create - song',
             filename: 'admins/pages/songs/create-song.html',
-            template: './src/admins/pages/songs/create/create-song/index.html',
-            chunks: ['admins_pages_songs_create_song']
+            template: './src/admins/pages/songs/create/index.html',
+            chunks: ['admins_pages_songs_create']
         }),
         new HtmlWebpackPlugin({
-            title: 'Admin Song | Create-album',
-            filename: 'admins/pages/songs/create-album.html',
-            template: './src/admins/pages/songs/create/create-album/index.html',
-            chunks: ['admins_pages_songs_create_album']
-        }),
-        new HtmlWebpackPlugin({
-            title: 'Admin Song | Create-albums-songs',
-            filename: 'admins/pages/songs/create-albums-songs.html',
-            template: './src/admins/pages/songs/create/create-albums-songs/index.html',
-            chunks: ['admins_pages_songs_create_albums_songs']
-        }),
-        new HtmlWebpackPlugin({
-            title: 'Admin Song | Edit',
+            title: 'Admin Song | Edit - songs',
             filename: 'admins/pages/songs/edit.html',
             template: './src/admins/pages/songs/edit/index.html',
             chunks: ['admins_pages_songs_edit']
         }),
         new HtmlWebpackPlugin({
-            title: 'Admin Song | Create',
+            title: 'Admin Song | List - songs',
             filename: 'admins/pages/songs/list.html',
             template: './src/admins/pages/songs/list/index.html',
             chunks: ['admins_pages_songs_list']
         }),
+            //
+
+            // page album
+        new HtmlWebpackPlugin({
+            title: 'Admin Album | Create - album',
+            filename: 'admins/pages/album/create-album.html',
+            template: './src/admins/pages/album/create/index.html',
+            chunks: ['admins_pages_album_create']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Admin Album | Edit - album',
+            filename: 'admins/pages/album/edit-album.html',
+            template: './src/admins/pages/album/edit/index.html',
+            chunks: ['admins_pages_album_edit']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Admin Album | List - album',
+            filename: 'admins/pages/album/list-album.html',
+            template: './src/admins/pages/album/list/index.html',
+            chunks: ['admins_pages_album_list']
+        }),
+            //
+
+            // page albums-songs
+        new HtmlWebpackPlugin({
+            title: 'Admin Albums - Songs | Create-albums-songs',
+            filename: 'admins/pages/albums-songs/create-albums-songs.html',
+            template: './src/admins/pages/albums-songs/create/index.html',
+            chunks: ['admins_pages_albums_songs_create']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Admin Albums - Songs | Edit-albums-songs',
+            filename: 'admins/pages/albums-songs/edit-albums-songs.html',
+            template: './src/admins/pages/albums-songs/create/index.html',
+            chunks: ['admins_pages_albums_songs_edit']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Admin Albums - Songs | List-albums-songs',
+            filename: 'admins/pages/albums-songs/list-albums-songs.html',
+            template: './src/admins/pages/albums-songs/create/index.html',
+            chunks: ['admins_pages_albums_songs_list']
+        }),
+            //
+
     ],
     module: {
         rules: [
