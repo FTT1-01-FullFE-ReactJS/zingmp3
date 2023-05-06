@@ -15,7 +15,7 @@ function createAlbum() {
         const albumNameValue = albumNameDom.value;
         const albumReleaseAtValue = albumReleaseAtDom.value;
         if (albumNameValue.trim().length === 0 || albumReleaseAtValue.trim().length === 0) {
-            console.log('Không được để trống album name hoặc năm phát hành');
+            toastr.info('Không được để trống các ô');
         }
         sendRequestSongToFirebase(albumNameValue, albumReleaseAtValue);
     });
@@ -31,11 +31,11 @@ async function sendRequestSongToFirebase(albumNameValue, albumReleaseAtValue) {
         });
         const data = await songDoc;
         if (data) {
-            alert('Create song succeed!');
-            window.location.href = 'list-album.html';
+            toastr.info('Create song succeed!');
+            // window.location.href = 'list-album.html';
         }
     } catch (err) {
-        alert('Create song failure!');
+        toastr.info('Create song failure!');
     }
 };
 createAlbum();
