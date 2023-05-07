@@ -17,7 +17,7 @@ function createAlbum() {
         const linkSongValue = linkSongDom.value;
         const imageSongValue = imageSongDom.value;
         if (nameSongValue.trim().length === 0 || linkSongValue.trim().length === 0 || imageSongValue.trim().length === 0) {
-            console.log('Không được để trống các ô');
+            toastr.info('Không được để trống các ô');
         }
         sendRequestSongToFirebase(nameSongValue, linkSongValue, imageSongValue);
     });
@@ -34,11 +34,11 @@ async function sendRequestSongToFirebase(nameSongValue, linkSongValue, imageSong
         });
         const data = await songDoc;
         if (data) {
-            $.toast('Toast message to be shown')
+            toastr.info('Create song succeed!');
             window.location.href = 'list.html';
         }
     } catch (err) {
-        alert('Create song failure!');
+        toastr.info('Create song failure!');
     }
 };
 createAlbum();
