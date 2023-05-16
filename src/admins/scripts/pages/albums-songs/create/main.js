@@ -3,7 +3,7 @@ import { database } from "../../../../../services/firebase";
 import { DATABASE_NAME_ALBUM_SONG } from "../../../../../services/firebase/database";
 import { v4 as uuidv4 } from 'uuid';
 import  toastr  from 'toastr'
-
+import { waitingRedirect } from "../../../common/common";
 function albumSongFormEl() {
     const createAlbumSongForm = document.querySelector('#form-wrapper');
     createAlbumSongForm.addEventListener('submit', function (event) {
@@ -46,9 +46,7 @@ async function sendRequestSongToFirebase(albumID, songIDsArray) {
             const data = await songDoc;
             if(data) {
                 toastr.info('Create song succeed!');
-                setTimeout(function() {
-                    window.location.href = 'list-albums-songs.html';
-                }, 3000);
+                waitingRedirect('list-albums-songs.html',3000);
             }
         });
     } catch (err) {

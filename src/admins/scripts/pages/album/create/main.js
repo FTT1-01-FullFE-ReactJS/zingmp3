@@ -3,6 +3,7 @@ import { database } from "../../../../../services/firebase";
 import { DATABASE_NAME_ALBUM } from "../../../../../services/firebase/database"
 import { v4 as uuidv4 } from 'uuid';
 import toastr from 'toastr';
+import { waitingRedirect } from "../../../common/common";
 
 function albumFormEl() {
     const createAlbumForm = document.querySelector('#form-wrapper');
@@ -47,9 +48,7 @@ async function sendRequestSongToFirebase(formData) {
         const data = await songDoc;
         if (data) {
             toastr.info('Create song succeed!');
-            setTimeout(function () {
-                window.location.href = 'list-album.html';
-            }, 3000);
+            waitingRedirect('list-album.html',3000);
         }
     } catch (err) {
         toastr.info('Create song failure!');
