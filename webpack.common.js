@@ -6,7 +6,7 @@ module.exports = {
         discover: './src/scripts/pages/discover/main.js',
         login: './src/scripts/pages/login/main.js',
         middleware: './src/scripts/pages/login/middleware.js',
-        zingchat: './src/scripts/pages/zingchat/main.js',
+        zingchart: './src/scripts/pages/zingchart/main.js',
         album: './src/scripts/pages/album/main.js',
         // ADMIN
         admins_pages_songs_create:'./src/admins/scripts/pages/songs/create/main.js',
@@ -28,10 +28,10 @@ module.exports = {
             chunks: ['discover']
         }),
         new HtmlWebpackPlugin({
-            title: 'zingchat',
-            filename: 'zingchat.html',
-            template: './src/pages/zingchat/index.html',
-            chunks: ['zinghchat']
+            title: 'zingchart',
+            filename: 'zingchart.html',
+            template: './src/pages/zingchart/index.html',
+            chunks: ['zinghchart']
         }),
         new HtmlWebpackPlugin({
             title: 'Singer',
@@ -104,13 +104,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Admin Albums - Songs | Edit-albums-songs',
             filename: 'admins/pages/albums-songs/edit-albums-songs.html',
-            template: './src/admins/pages/albums-songs/create/index.html',
+            template: './src/admins/pages/albums-songs/edit/index.html',
             chunks: ['admins_pages_albums_songs_edit']
         }),
         new HtmlWebpackPlugin({
             title: 'Admin Albums - Songs | List-albums-songs',
             filename: 'admins/pages/albums-songs/list-albums-songs.html',
-            template: './src/admins/pages/albums-songs/create/index.html',
+            template: './src/admins/pages/albums-songs/list/index.html',
             chunks: ['admins_pages_albums_songs_list']
         }),
             //

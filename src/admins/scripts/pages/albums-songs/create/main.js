@@ -2,42 +2,69 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { database } from "../../../../../services/firebase";
 import { DATABASE_NAME_ALBUM_SONG } from "../../../../../services/firebase/database";
 import { v4 as uuidv4 } from 'uuid';
+import  toastr  from 'toastr'
+import { waitingRedirect } from "../../../common/common";
 
-function createAlbumSong() {
+function albumSongFormEl() {
     const createAlbumSongForm = document.querySelector('#form-wrapper');
     createAlbumSongForm.addEventListener('submit', function (event) {
         event.preventDefault();
         const albumIDsDom = document.querySelector('#albums-id');
         const songIDsDom = document.querySelector('#song-ids');
-        if (!albumIDsDom || !songIDsDom) {
-            throw new Error('Không tìm thấy dom là #albums-id hoac dom là #song-ids');
+        let error = [];
+        if (!albumIDsDom) {
+            error.push('Không tìm thấy dom là #albums-id');
+        } else if (!songIDsDom) {
+            error.push('Không tìm thấy dom là #song-ids');
         }
-        const albumIDsValue = albumIDsDom.value;
-        const songIDsValue = songIDsDom.value;
+        if (albumIDsDom?.length) {
+            let errorDomArr = error.map(function(message) {
+                return `<span>${message}</span>`;
+            });
+            let errorDomHTML = errorDomArr.join('');
+            document.getElementById('your-error-element-id').innerHTML = errorDomHTML;
+        }
+        const albumIDsValue = albumIDsDom?.value;
+        const songIDsValue = songIDsDom?.value;
         const songIDsArray = songIDsValue.split(',');
-        if (albumIDsValue.trim().length === 0 || songIDsValue.trim().length === 0) {
-            toastr.info('Không được để trống các ô');
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        if (albumIDsValue.trim() === '') {
+            errorDiv.createText = 'Không được để trống ô AlbumID!';
+            createAlbumSongForm.appendChild(errorDiv);
+        } else if (songIDsValue.trim() === '') {
+            errorDiv.createText = 'Không được để trống ô SongID!';
+            createAlbumSongForm.appendChild(errorDiv);
+        } else {
+            errorDiv.remove();
+            const albumSongData = {
+                album_id: albumIDsValue,
+                song_id_arr:songIDsArray,
+            };
+            sendRequestSongToFirebase(albumSongData);
         }
-        sendRequestSongToFirebase(albumIDsValue, songIDsArray);
     });
 };
 
-async function sendRequestSongToFirebase(albumID, songIDsArray) {
+async function sendRequestSongToFirebase(albumSongData) {
     try {
         const songCollection = collection(database, DATABASE_NAME_ALBUM_SONG);
-        songIDsArray.forEach(async (songID) => {
+        albumSongData.song_id_arr.forEach(async (songID) => {
             const songDoc = addDoc(songCollection, {
                 id: uuidv4(),
-                album_id: albumID,
+                album_id: albumSongData.album_id,
                 song_id: songID,
                 create_at: serverTimestamp()
             });
-            await songDoc;
+            const data = await songDoc;
+            if(data) {
+                toastr.info('Create song succeed!');
+                waitingRedirect('list-albums-songs.html',3000);
+            }
         });
-        toastr.info('Create song succeed!');
-        // window.location.href = 'list-albums-songs.html';
     } catch (err) {
         toastr.info('Create song failure!');
     }
 };
-createAlbumSong();
+
+albumSongFormEl();
