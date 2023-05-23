@@ -67,6 +67,7 @@ async function sendRequestSongToFirebase(songData) {
     toastr.info('Create song succeed!');
     waitingRedirect('list.html', 3000);
   } catch (err) {
+    console.log({ err });
     toastr.info('Create song failure!');
   }
 };
