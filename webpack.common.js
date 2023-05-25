@@ -10,8 +10,11 @@ module.exports = {
         album: './src/scripts/pages/album/main.js',
         // ADMIN
         admins_pages_songs_create:'./src/admins/scripts/pages/songs/create/main.js',
+        admins_pages_songs_list:'./src/admins/scripts/pages/songs/list/main.js',
         admins_pages_album_create:'./src/admins/scripts/pages/album/create/main.js',
+        admins_pages_album_list:'./src/admins/scripts/pages/album/list/main.js',
         admins_pages_albums_songs_create:'./src/admins/scripts/pages/albums-songs/create/main.js',
+        admins_pages_albums_songs_list:'./src/admins/scripts/pages/albums-songs/list/main.js',
     },
     plugins: [
         new Dotenv(),

@@ -20,13 +20,6 @@ function songFormEl() {
     } else if (!imageSongDom) {
         error.push('Không tìm thấy dom #imageSongDom!');
     }
-    if (nameSongDom?.length) {
-        let errorDomArr = error.map(function(message) {
-            return `<span>${message}</span>`;
-        });
-        let errorDomHTML = errorDomArr.join('');
-        document.getElementById('your-error-element-id').innerHTML = errorDomHTML;
-    }
     const nameSongValue = nameSongDom?.value;
     const linkSongValue = linkSongDom?.value;
     const imageSongValue = imageSongDom?.value;
@@ -68,6 +61,8 @@ async function sendRequestSongToFirebase(songData) {
     waitingRedirect('list.html', 3000);
   } catch (err) {
     toastr.info('Create song failure!');
+    console.log(err);
+
   }
 };
 

@@ -17,13 +17,6 @@ function albumSongFormEl() {
         } else if (!songIDsDom) {
             error.push('Không tìm thấy dom là #song-ids');
         }
-        if (albumIDsDom?.length) {
-            let errorDomArr = error.map(function(message) {
-                return `<span>${message}</span>`;
-            });
-            let errorDomHTML = errorDomArr.join('');
-            document.getElementById('your-error-element-id').innerHTML = errorDomHTML;
-        }
         const albumIDsValue = albumIDsDom?.value;
         const songIDsValue = songIDsDom?.value;
         const songIDsArray = songIDsValue.split(',');

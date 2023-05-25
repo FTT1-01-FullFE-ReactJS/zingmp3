@@ -69,7 +69,7 @@ img {
 }
 input:focus ~ label,
 input:valid ~ label {
-top: -5px;
+    top: -5px;
 }
 .form-group input {
     width: 100%;
@@ -114,4 +114,10 @@ button {
 }
 button:hover {
     background-color: hsla(0,0%,100%,0.1);
+}
+.error-message {
+    position: absolute;
+    top: 80%;
+    left: 41%;
+    color: #FFF;
 }

@@ -1,8 +1,8 @@
 import { query, collection, onSnapshot, deleteDoc } from "firebase/firestore";
 import { database } from "../../../../../services/firebase";
-import { DATABASE_NAME_SONG } from "../../../../../services/firebase/database";
+import { DATABASE_NAME_ALBUM_SONG } from "../../../../../services/firebase/database";
 
-const songQuery = query(collection(database, DATABASE_NAME_SONG));
+const songQuery = query(collection(database, DATABASE_NAME_ALBUM_SONG));
 onSnapshot(songQuery, snapshot => {
     const collection = [];
     snapshot.forEach(doc => {
@@ -11,17 +11,11 @@ onSnapshot(songQuery, snapshot => {
     renderDom(collection);
 });
 
-function renderDom(songs) {
-    const _html = songs.map(song => (
+function renderDom(albumSongs) {
+    const _html = albumSongs.map(albumSong => (
         `<tr>
-            <td>${song.id}</td>
-            <td>${song.name_song}</td>
-            <td>
-                <a href="${song.link_song}">${song.link_song}</a>
-            </td>
-            <td>
-                <img width="30" height="30" src="${song.image_song}" alt="">
-            </td>
+            <td>${albumSong.album_id}</td>
+            <td>${albumSong.song_id}</td>
             <td>
                 <button>Delete</button>
                 <button>Edit</button>

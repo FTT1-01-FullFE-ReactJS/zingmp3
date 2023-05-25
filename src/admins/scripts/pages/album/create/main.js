@@ -17,13 +17,6 @@ function albumFormEl() {
         } else if (!albumReleaseAtDom) {
             error.push('Không tìm thấy dom là #albumReleaseAtDom');
         }
-        if (albumNameDom?.length) {
-            let errorDomArr = error.map(function(message) {
-                return `<span>${message}</span>`;
-            });
-            let errorDomHTML = errorDomArr.join('');
-            document.getElementById('your-error-element-id').innerHTML = errorDomHTML;
-        }
         const albumNameValue = albumNameDom?.value;
         const albumReleaseAtValue = albumReleaseAtDom?.value;
         const errorDiv = document.createElement('div');
@@ -50,7 +43,7 @@ async function sendRequestSongToFirebase(albumData) {
         const songCollection = collection(database, DATABASE_NAME_ALBUM);
         const songDoc = addDoc(songCollection, {
             name_album: albumData.name_album,
-            release_at: albumData.albumReleaseAtValue,
+            release_at: albumData.release_at,
             id_album: uuidv4(),
             create_at: serverTimestamp()
         });
