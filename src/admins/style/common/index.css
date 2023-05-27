@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+#form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+
+
+}
+.bg-blur {
+    background: url("https://zjs.zmdcdn.me/zmp3-desktop/releases/v1.9.28/static/media/week-chart-bg.edf332e5.jpg") center top / cover no-repeat;
+    filter: grayscale(1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.bg-apha {
+    background-color: rgba(32,19,53,0.9);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.img {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+}
+img {
+    width: 100%;
+}
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+}
+.form-group {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #dadada;
+}
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #dbc5c5;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label {
+    top: -5px;
+}
+.form-group input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #dadada;
+}
+.forget {
+    margin: -15px 0 15px ;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forget label input {
+    margin-right: 3px;
+
+}
+.forget label a {
+    color: #fff;
+    text-decoration: none;
+}
+.forget label a:hover{
+    text-decoration: underline;
+}
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #5a4c70;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #191111;
+}
+button:hover {
+    background-color: hsla(0,0%,100%,0.1);
+}
+.error-message {
+    position: absolute;
+    top: 80%;
+    left: 41%;
+    color: #FFF;
+}

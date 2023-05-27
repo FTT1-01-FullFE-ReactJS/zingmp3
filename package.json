@@ -19,6 +19,7 @@
   "homepage": "https://github.com/tutor-chinh-fe/zingmp3#readme",
   "devDependencies": {
     "css-loader": "^6.7.3",
+    "dotenv-webpack": "^8.0.1",
     "file-loader": "^6.2.0",
     "firebase": "^9.19.1",
     "html-loader": "^4.2.0",
@@ -31,6 +32,8 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "js-cookie": "^3.0.1"
+    "js-cookie": "^3.0.1",
+    "toastr": "^2.1.4",
+    "uuid": "^9.0.0"
   }
 }

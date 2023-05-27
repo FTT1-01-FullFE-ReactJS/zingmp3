@@ -1,15 +1,23 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const Dotenv = require('dotenv-webpack');
 module.exports = {
     entry: {
         mymusic: './src/scripts/pages/mymusic/main.js',
         discover: './src/scripts/pages/discover/main.js',
         login: './src/scripts/pages/login/main.js',
         middleware: './src/scripts/pages/login/middleware.js',
-        zingchat: './src/scripts/pages/zingchat/main.js',
+        zingchart: './src/scripts/pages/zingchart/main.js',
         album: './src/scripts/pages/album/main.js',
+        // ADMIN
+        admins_pages_songs_create:'./src/admins/scripts/pages/songs/create/main.js',
+        admins_pages_songs_list:'./src/admins/scripts/pages/songs/list/main.js',
+        admins_pages_album_create:'./src/admins/scripts/pages/album/create/main.js',
+        admins_pages_album_list:'./src/admins/scripts/pages/album/list/main.js',
+        admins_pages_albums_songs_create:'./src/admins/scripts/pages/albums-songs/create/main.js',
+        admins_pages_albums_songs_list:'./src/admins/scripts/pages/albums-songs/list/main.js',
     },
     plugins: [
+        new Dotenv(),
         new HtmlWebpackPlugin({
             title: 'mymusic',
             filename: 'mymusic.html',
@@ -23,10 +31,10 @@ module.exports = {
             chunks: ['discover']
         }),
         new HtmlWebpackPlugin({
-            title: 'zingchat',
-            filename: 'zingchat.html',
-            template: './src/pages/zingchat/index.html',
-            chunks: ['zinghchat']
+            title: 'zingchart',
+            filename: 'zingchart.html',
+            template: './src/pages/zingchart/index.html',
+            chunks: ['zinghchart']
         }),
         new HtmlWebpackPlugin({
             title: 'Singer',
@@ -46,17 +54,79 @@ module.exports = {
             template: './src/pages/login/index.html',
             chunks: ['login']
         }),
+        // ADMIN
+            // pages songs
+        new HtmlWebpackPlugin({
+            title: 'Admin Song | Create - song',
+            filename: 'admins/pages/songs/create-song.html',
+            template: './src/admins/pages/songs/create/index.html',
+            chunks: ['admins_pages_songs_create']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Admin Song | Edit - songs',
+            filename: 'admins/pages/songs/edit.html',
+            template: './src/admins/pages/songs/edit/index.html',
+            chunks: ['admins_pages_songs_edit']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Admin Song | List - songs',
+            filename: 'admins/pages/songs/list.html',
+            template: './src/admins/pages/songs/list/index.html',
+            chunks: ['admins_pages_songs_list']
+        }),
+            //
+
+            // page album
+        new HtmlWebpackPlugin({
+            title: 'Admin Album | Create - album',
+            filename: 'admins/pages/album/create-album.html',
+            template: './src/admins/pages/album/create/index.html',
+            chunks: ['admins_pages_album_create']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Admin Album | Edit - album',
+            filename: 'admins/pages/album/edit-album.html',
+            template: './src/admins/pages/album/edit/index.html',
+            chunks: ['admins_pages_album_edit']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Admin Album | List - album',
+            filename: 'admins/pages/album/list-album.html',
+            template: './src/admins/pages/album/list/index.html',
+            chunks: ['admins_pages_album_list']
+        }),
+            //
+
+            // page albums-songs
+        new HtmlWebpackPlugin({
+            title: 'Admin Albums - Songs | Create-albums-songs',
+            filename: 'admins/pages/albums-songs/create-albums-songs.html',
+            template: './src/admins/pages/albums-songs/create/index.html',
+            chunks: ['admins_pages_albums_songs_create']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Admin Albums - Songs | Edit-albums-songs',
+            filename: 'admins/pages/albums-songs/edit-albums-songs.html',
+            template: './src/admins/pages/albums-songs/edit/index.html',
+            chunks: ['admins_pages_albums_songs_edit']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Admin Albums - Songs | List-albums-songs',
+            filename: 'admins/pages/albums-songs/list-albums-songs.html',
+            template: './src/admins/pages/albums-songs/list/index.html',
+            chunks: ['admins_pages_albums_songs_list']
+        }),
+            //
+
     ],
     module: {
         rules: [
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader', // 3.Inject styles into DOM
-                    'css-loader',   // 2.Turns css into commonjs
+                    'style-loader',
+                    'css-loader',
                 ]
-                // "css-loader" khi nó tìm thất file css thì nó sẽ biên dịch file css đó thành file javascript
-                // và sau đó nó được inject vào dome thông qua "style-loader"
             },
             {
                 test: /\.html$/,

@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { FacebookAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-
+import { getFirestore } from "firebase/firestore"
 import {
     API_KEY,
     AUTH_DOMAIN,
@@ -23,5 +23,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-
-export { auth, FacebookAuthProvider, signInWithPopup };
+const database = getFirestore(app);
+export { auth, FacebookAuthProvider, signInWithPopup, database };
