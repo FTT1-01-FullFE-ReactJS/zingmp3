@@ -1,7 +1,7 @@
 import {addDoc, collection, serverTimestamp} from 'firebase/firestore';
 import {database} from './index';
 import { v4 as uuidv4 } from 'uuid';
-import {catchException, showNotification} from '../../admins/scripts/common/common';
+import {catchException, showNotification} from '../../admins/scripts/common/helpers';
 import {BUSINESS_LOGIC_ERROR, CREATE_ALBUM} from '../../admins/scripts/common/constants';
 
 class FireBaseClient {
@@ -20,7 +20,6 @@ class FireBaseClient {
 
   setStoreSuccessMessage(message) {
     this.storeSuccessMessage = message;
-
     return this;
   }
 
