@@ -1,6 +1,6 @@
-import { DATABASE_NAME_ALBUM } from "../../../../../services/firebase/database"
+import  firebaseClient  from "../../../../../services/firebase/firebaseClient";
+import { DATABASE_NAME_ALBUM } from "../../../../../services/firebase/database";
 import { waitingRedirect } from "../../../common/helpers";
-import FireBaseClient from "../../../../../services/firebase/firebaseClient";
 
 function albumFormEl() {
     const createAlbumForm = document.querySelector('#form-wrapper');
@@ -36,17 +36,17 @@ function albumFormEl() {
     });
 };
 
+
 async function sendRequestSongToFirebase(albumData) {
-    let firebaseClient = new FireBaseClient(DATABASE_NAME_ALBUM);
-    firebaseClient
-        .setStoreSuccessMessage('Create song succeed!')
-        .setStoreFailMessage('Create song failure!');
+    let firebaseClientInstance = new firebaseClient.FireBaseClient(DATABASE_NAME_ALBUM);
+    firebaseClientInstance
+        .setStoreSuccessMessage('Create album succeed!')
+        .setStoreFailMessage('Create album failure!');
+    const _SongID = await firebaseClientInstance.store(albumData);
 
-    const _albumID = await firebaseClient.store(albumData);
-
-    if (_albumID) {
+    if (_SongID) {
         waitingRedirect('list-album.html', 3000);
     }
-};
+}
 
 albumFormEl();

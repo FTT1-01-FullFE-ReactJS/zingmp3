@@ -5,6 +5,8 @@ import { v4 as uuidv4 } from 'uuid';
 import toastr from 'toastr'
 import { waitingRedirect } from "../../../common/helpers";
 
+
+
 function albumSongFormEl() {
     const createAlbumSongForm = document.querySelector('#form-wrapper');
     createAlbumSongForm.addEventListener('submit', function (event) {
@@ -58,6 +60,5 @@ async function sendRequestSongToFirebase(albumSongData) {
         toastr.info('Create song failure!');
     }
 };
-
 
 albumSongFormEl();

@@ -1,8 +1,23 @@
-import {addDoc, collection, serverTimestamp} from 'firebase/firestore';
-import {database} from './index';
+import { addDoc, collection, serverTimestamp, query, onSnapshot, deleteDoc } from 'firebase/firestore';
+import { database } from './index';
 import { v4 as uuidv4 } from 'uuid';
-import {catchException, showNotification} from '../../admins/scripts/common/helpers';
-import {BUSINESS_LOGIC_ERROR, CREATE_ALBUM} from '../../admins/scripts/common/constants';
+import { catchException, showNotification } from '../../admins/scripts/common/helpers';
+import { BUSINESS_LOGIC_ERROR } from '../../admins/scripts/common/constants';
+const CREATE_RESOURCE = 'Create resource';
+
+class RenderDoms {
+  static showList(collectionRef, renderDom) {
+    const querySnapshot = query(collection(database, collectionRef));
+    onSnapshot(querySnapshot, snapshot => {
+      const collection = [];
+      snapshot.forEach(doc => {
+        collection.push({ ...doc.data(), id: doc.id });
+      });
+      renderDom(collection);
+    });
+  }
+}
+
 
 class FireBaseClient {
   constructor(dbName) {
@@ -14,7 +29,6 @@ class FireBaseClient {
 
   setStoreFailMessage(message) {
     this.storeFailMessage = message;
-
     return this;
   }
 
@@ -26,16 +40,16 @@ class FireBaseClient {
   async store(resource) {
     try {
       const _collection = this.#makeCollection();
-      const _document = addDoc(_collection, this.#getStoreResource(resource));
-      const _data = await _document;
+      const _document = await addDoc(_collection, this.#getStoreResource(resource));
+      const _data = _document;
 
-      showNotification(CREATE_ALBUM).success(this.storeSuccessMessage);
+      showNotification(CREATE_RESOURCE).success(this.storeSuccessMessage);
 
       return _data?.id;
     } catch (error) {
-      showNotification(CREATE_ALBUM).error(this.storeFailMessage);
+      showNotification(CREATE_RESOURCE).error(this.storeFailMessage);
       catchException(BUSINESS_LOGIC_ERROR, {
-        custom_error: `Can't store data into firebase server, please try again.`,
+        custom_error: `Can't store data into the Firebase server, please try again.`,
         catch_error: error,
       });
     }
@@ -54,4 +68,4 @@ class FireBaseClient {
   }
 }
 
-export default FireBaseClient;
+export default {RenderDoms,FireBaseClient }

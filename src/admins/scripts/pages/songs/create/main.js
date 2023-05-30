@@ -1,6 +1,5 @@
-import FireBaseClient from "../../../../../services/firebase/firebaseClient";
+import  firebaseClient  from "../../../../../services/firebase/firebaseClient";
 import { DATABASE_NAME_SONG } from "../../../../../services/firebase/database";
-
 import { waitingRedirect } from "../../../common/helpers";
 
 function songFormEl() {
@@ -46,15 +45,15 @@ function songFormEl() {
 };
 
 async function sendRequestSongToFirebase(songData) {
-    let firebaseClient = new FireBaseClient(DATABASE_NAME_SONG);
-    firebaseClient
+    let firebaseClientInstance = new firebaseClient.FireBaseClient(DATABASE_NAME_SONG);
+    firebaseClientInstance
         .setStoreSuccessMessage('Create song succeed!')
-        .setStoreFailMessage('Create song failure!');
-    const _SongID = await firebaseClient.store(songData);
+        .setStoreFailMessage('Create song failure!')
+    const _SongID = await firebaseClientInstance.store(songData);
 
     if (_SongID) {
         waitingRedirect('list.html', 3000);
     }
-};
+}
 
 songFormEl();
