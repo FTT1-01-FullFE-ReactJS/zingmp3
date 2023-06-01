@@ -18,13 +18,13 @@ class RenderDoms {
   }
 }
 
-
 class FireBaseClient {
   constructor(dbName) {
     this.dbName = dbName;
     this.database = database;
     this.storeSuccessMessage = '';
     this.storeFailMessage = '';
+    // this.update = '';
   }
 
   setStoreFailMessage(message) {
@@ -36,7 +36,10 @@ class FireBaseClient {
     this.storeSuccessMessage = message;
     return this;
   }
-
+//   setUpdate(message) {
+//     this.update = message;
+//     return this;
+//   }
   async store(resource) {
     try {
       const _collection = this.#makeCollection();

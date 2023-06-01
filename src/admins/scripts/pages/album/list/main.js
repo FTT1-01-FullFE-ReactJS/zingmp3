@@ -1,8 +1,7 @@
-
 import { DATABASE_NAME_ALBUM} from "../../../../../services/firebase/database";
-import firebaseClient from "../../../../../services/firebase/firebaseClient";
+import { showList } from "../../../common/helpers";
 
-firebaseClient.RenderDoms.showList(DATABASE_NAME_ALBUM, renderDom);
+showList(DATABASE_NAME_ALBUM, renderDom);
 function renderDom(albums) {
     const _html = albums.map(album => (
         `<tr>

@@ -1,9 +1,6 @@
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { database } from "../../../../../services/firebase";
-import { DATABASE_NAME_ALBUM_SONG } from "../../../../../services/firebase/database";
-import { v4 as uuidv4 } from 'uuid';
-import toastr from 'toastr'
 import { waitingRedirect } from "../../../common/helpers";
+import { DATABASE_NAME_ALBUM_SONG } from "../../../../../services/firebase/database";
+import firebaseClient from "../../../../../services/firebase/firebaseClient";
 
 
 
@@ -42,23 +39,16 @@ function albumSongFormEl() {
 };
 
 async function sendRequestSongToFirebase(albumSongData) {
-    try {
-        const songCollection = collection(database, DATABASE_NAME_ALBUM_SONG);
-        for (const songID of albumSongData.song_id_arr) {
-            const songDoc = await addDoc(songCollection, {
-                id: uuidv4(),
-                album_id: albumSongData.album_id,
-                song_id: songID,
-                create_at: serverTimestamp()
-            });
-            if (songDoc) {
-                toastr.info('Create song succeed!');
-                await waitingRedirect('list-albums-songs.html', 3000);
-            }
-        }
-    } catch (err) {
-        toastr.info('Create song failure!');
+    let firebaseClientInstance = new firebaseClient.FireBaseClient(DATABASE_NAME_ALBUM_SONG);
+    for (const songID of albumSongData.song_id_arr) {
+      const songData = { ...albumSongData, song_id: songID };
+      await firebaseClientInstance
+        .setStoreSuccessMessage('Create album-song succeed!')
+        .setStoreFailMessage('Create album-song failure!')
+        .store(songData);
     }
-};
+    waitingRedirect('list-albums-songs.html', 3000);
+  }
+
 
 albumSongFormEl();

@@ -1,4 +1,18 @@
 import toastr from 'toastr';
+import { collection as firestoreCollection, getDocs } from 'firebase/firestore';
+import { database } from '../../../services/firebase';
+
+async function showList(collectionRef, renderDom) {
+  const collectionSnapshot = await getDocs(firestoreCollection(database, collectionRef));
+
+  const collection = [];
+  collectionSnapshot.forEach((doc) => {
+    collection.push({ ...doc.data(), id: doc.id });
+  });
+
+  renderDom(collection);
+}
+
 
 async function waitingRedirect(url, timeout) {
     await new Promise(resolve => setTimeout(resolve, timeout));
@@ -18,7 +32,6 @@ function catchException(key, errors = {}) {
 
     throw new Error(errorMessage);
 }
-
 function showNotification(key) {
     return {
         error: function (message = '') {
@@ -30,4 +43,4 @@ function showNotification(key) {
     }
 }
 
-export { waitingRedirect, catchException, showNotification };
+export { waitingRedirect, catchException, showNotification, showList };
