@@ -1,8 +1,6 @@
-import { showList } from "../../../common/helpers";
+import FireBaseClient from "../../../../../services/firebase/firebaseClient";
 import { DATABASE_NAME_SONG } from "../../../../../services/firebase/database";
-
-
-showList(DATABASE_NAME_SONG, renderDom);
+const firebaseClient = new FireBaseClient(DATABASE_NAME_SONG)
 function renderDom(songs) {
   const _html = songs.map(song => (
     `<tr>
@@ -23,3 +21,4 @@ function renderDom(songs) {
 
   document.querySelector('.table-data').innerHTML = _html.join('');
 }
+firebaseClient.showList(renderDom);

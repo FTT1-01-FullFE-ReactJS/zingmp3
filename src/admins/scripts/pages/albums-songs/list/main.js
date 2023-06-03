@@ -1,7 +1,8 @@
-import { DATABASE_NAME_ALBUM_SONG } from "../../../../../services/firebase/database";
-import { showList } from "../../../common/helpers";
 
-showList(DATABASE_NAME_ALBUM_SONG, renderDom);
+import FireBaseClient from "../../../../../services/firebase/firebaseClient";
+import { DATABASE_NAME_ALBUM_SONG } from "../../../../../services/firebase/database";
+
+const firebaseClient = new FireBaseClient(DATABASE_NAME_ALBUM_SONG);
 function renderDom(albumSongs) {
     const _html = albumSongs.map(albumSong => (
         `<tr>
@@ -16,3 +17,4 @@ function renderDom(albumSongs) {
 
     document.querySelector('.table-data').innerHTML = _html.join('');
 }
+firebaseClient.showList(renderDom);
