@@ -24,14 +24,17 @@ class FireBaseClient {
         this.storeSuccessMessage = message;
         return this;
     }
-    async showList(ref, renderDom) {
-        const querySnapshot = await getDocs(collection(database, ref));
-        const collectionArr = [];
+
+    async list() {
+        const querySnapshot = await getDocs(collection(this.database, this.dbName));
+        let data = [];
         querySnapshot.forEach((doc) => {
-            collectionArr.push({ ...doc.data(), id: doc.id });
+            data.push({ ...doc.data(), id: doc.id });
         });
-        renderDom(collectionArr);
+
+        return data;
     }
+
     async store(resource) {
         try {
             const _collection = this.#makeCollection();

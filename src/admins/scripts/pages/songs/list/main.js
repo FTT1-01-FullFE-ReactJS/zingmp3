@@ -1,8 +1,16 @@
 import FireBaseClient from "../../../../../services/firebase/firebaseClient";
 import { DATABASE_NAME_SONG } from "../../../../../services/firebase/database";
-const firebaseClient = new FireBaseClient(DATABASE_NAME_SONG)
-function renderDom(songs) {
-  const _html = songs.map(song => (
+
+async function handle() {
+  const firebaseClient = new FireBaseClient(DATABASE_NAME_SONG); // 1GB
+
+  let listSongs = await firebaseClient.list();
+
+  renderDom(listSongs);
+}
+
+function renderDom(data) {
+  const _html = data.map(song => (
     `<tr>
       <td>${song.id}</td>
       <td>${song.name_song}</td>
@@ -21,4 +29,5 @@ function renderDom(songs) {
 
   document.querySelector('.table-data').innerHTML = _html.join('');
 }
-firebaseClient.showList(renderDom);
+
+handle();
