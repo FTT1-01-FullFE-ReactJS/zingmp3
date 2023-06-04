@@ -1,7 +1,9 @@
 import FireBaseClient from "../../../../../services/firebase/firebaseClient";
 import { DATABASE_NAME_SONG } from "../../../../../services/firebase/database";
 import { waitingRedirect } from "../../../common/helpers";
+
 let firebaseClientInstance = new FireBaseClient(DATABASE_NAME_SONG);
+
 function songFormEl() {
     const createSongForm = document.querySelector('#form-wrapper');
     createSongForm.addEventListener('submit', function (event) {
@@ -49,7 +51,6 @@ async function sendRequestSongToFirebase(songData) {
         .setStoreSuccessMessage('Create song succeed!')
         .setStoreFailMessage('Create song failure!')
     const _SongID = await firebaseClientInstance.store(songData);
-
     if (_SongID) {
         waitingRedirect('list.html', 3000);
     }

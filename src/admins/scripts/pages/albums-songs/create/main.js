@@ -1,6 +1,7 @@
 import { waitingRedirect } from "../../../common/helpers";
 import FireBaseClient from "../../../../../services/firebase/firebaseClient";
 import { DATABASE_NAME_ALBUM_SONG } from "../../../../../services/firebase/database";
+
 const firebaseClient = new FireBaseClient(DATABASE_NAME_ALBUM_SONG);
 
 function albumSongFormEl() {

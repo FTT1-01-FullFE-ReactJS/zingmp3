@@ -1,6 +1,5 @@
 import { addDoc, collection, serverTimestamp, onSnapshot, getDocs } from 'firebase/firestore';
 import { database } from './index';
-
 import { v4 as uuidv4 } from 'uuid';
 import { catchException, showNotification } from '../../admins/scripts/common/helpers';
 import { BUSINESS_LOGIC_ERROR } from '../../admins/scripts/common/constants';
